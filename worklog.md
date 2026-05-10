@@ -83,3 +83,27 @@ Stage Summary:
 - Floating animated badges and orbs throughout
 - Gradient borders and glow effects on cards and form
 - Professional consulting aesthetic maintained while being visually modern
+
+---
+Task ID: 4
+Agent: Main Agent
+Task: Change font to Alexandria and match Corpenta website colors/style from screenshots
+
+Work Log:
+- Analyzed 3 uploaded screenshots of corpenta.com using VLM to identify exact font and color style
+- Confirmed the website uses modern sans-serif typography with navy + white + green color scheme
+- Changed font from Poppins/Roboto to Alexandria (Google Font with Arabic + Latin support)
+- Used Next.js font optimization (next/font/google) for Alexandria with weights 200-900
+- Updated layout.tsx to import Alexandria and apply as CSS variable --font-alexandria
+- Updated globals.css to use var(--font-alexandria) throughout
+- Removed old @font-face declarations for Poppins and Roboto
+- Added "Your Trusted Partner for Foreign Company Formation" subtitle to hero (matching Corpenta website tagline)
+- Changed hero heading weight to font-extrabold for stronger presence
+- Lint passes with no errors
+
+Stage Summary:
+- Font changed to Alexandria across entire site (headings, body, all elements)
+- Alexandria supports both Arabic and Latin characters natively
+- Colors remain consistent with Corpenta brand (#03034d navy, #039146 green)
+- Added English tagline matching corpenta.com's "Your Trusted Partner" branding
+- Page compiles and renders successfully

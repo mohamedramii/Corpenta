@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Alexandria } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+
+const alexandria = Alexandria({
+  subsets: ["arabic", "latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-alexandria",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Corpenta - تأسيس الشركات في السعودية",
@@ -26,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
-      <body className="antialiased bg-background text-foreground">
+      <body className={`${alexandria.variable} antialiased bg-background text-foreground`}>
         {children}
         <Toaster />
       </body>

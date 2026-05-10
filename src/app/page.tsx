@@ -302,17 +302,25 @@ function HeroSection() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-heading text-[2rem] sm:text-5xl md:text-[3.5rem] lg:text-[3.8rem] font-bold leading-[1.15] text-white mb-6"
+              className="font-heading text-[2rem] sm:text-5xl md:text-[3.5rem] lg:text-[3.8rem] font-extrabold leading-[1.2] text-white mb-6"
             >
               أسس شركتك في السعودية{' '}
               <span className="gradient-text">بثقة ووضوح</span>
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="font-medium text-sm sm:text-base mb-2" style={{ color: greenLight }}
+            >
+              Your Trusted Partner for Foreign Company Formation
+            </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-base sm:text-lg text-gray-300/90 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg text-gray-300 leading-[1.8] mb-8 max-w-xl mx-auto lg:mx-0"
             >
               نساعد المستثمرين ورواد الأعمال الأجانب على تأسيس شركاتهم في السعودية بشكل قانوني واحترافي، مع دعم كامل من بداية الإجراءات وحتى تشغيل الشركة.
             </motion.p>
