@@ -32,10 +32,11 @@ import {
 /* ─── Brand Colors ─── */
 const navy = '#03034d'
 const navyLight = '#0a0a6e'
-const green = '#039146'
-const greenLight = '#56c477'
-const greenPale = '#c4f2d4'
-const greenBg = '#eafaf0'
+const navyDark = '#02023a'
+const accent = '#2d2db5'
+const accentLight = '#5b5bd6'
+const accentPale = '#c8cce8'
+const accentBg = '#ededfa'
 
 /* ─── Unsplash Images ─── */
 const IMG = {
@@ -150,9 +151,9 @@ function AnimatedCounter({ target, suffix = '', prefix = '' }: { target: number;
 function FloatingOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-20 animate-float" style={{ background: 'radial-gradient(circle, rgba(3,145,70,0.3) 0%, transparent 70%)' }} />
-      <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full opacity-15 animate-float-delayed" style={{ background: 'radial-gradient(circle, rgba(86,196,119,0.3) 0%, transparent 70%)' }} />
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, rgba(196,242,212,0.4) 0%, transparent 70%)' }} />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-20 animate-float" style={{ background: 'radial-gradient(circle, rgba(45,45,181,0.25) 0%, transparent 70%)' }} />
+      <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full opacity-15 animate-float-delayed" style={{ background: 'radial-gradient(circle, rgba(91,91,214,0.2) 0%, transparent 70%)' }} />
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, rgba(200,204,232,0.3) 0%, transparent 70%)' }} />
     </div>
   )
 }
@@ -212,7 +213,7 @@ function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl transition-all hover:shadow-md hover:scale-[1.02]"
-              style={{ backgroundColor: '#25D366', color: '#fff' }}
+              style={{ backgroundColor: navy, color: '#fff' }}
             >
               <MessageCircle className="w-4 h-4" />
               واتساب
@@ -220,7 +221,7 @@ function Header() {
             <a
               href="#contact"
               className="px-5 py-2.5 text-sm font-semibold rounded-xl text-white transition-all hover:shadow-lg hover:scale-[1.02]"
-              style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}
+              style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}
             >
               احجز استشارة
             </a>
@@ -247,10 +248,10 @@ function Header() {
                 </a>
               ))}
               <div className="pt-3 space-y-2 border-t border-gray-100 mt-2">
-                <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium rounded-xl" style={{ backgroundColor: '#25D366', color: '#fff' }}>
+                <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium rounded-xl" style={{ backgroundColor: navy, color: '#fff' }}>
                   <MessageCircle className="w-4 h-4" /> تواصل عبر واتساب
                 </a>
-                <a href="#contact" onClick={() => setMobileOpen(false)} className="flex items-center justify-center w-full px-4 py-3 text-sm font-semibold rounded-xl text-white" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+                <a href="#contact" onClick={() => setMobileOpen(false)} className="flex items-center justify-center w-full px-4 py-3 text-sm font-semibold rounded-xl text-white" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                   احجز استشارة مجانية
                 </a>
               </div>
@@ -292,8 +293,8 @@ function HeroSection() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 glass"
             >
-              <Sparkles className="w-3.5 h-3.5" style={{ color: greenLight }} />
-              <span className="text-xs sm:text-sm font-medium" style={{ color: greenPale }}>
+              <Sparkles className="w-3.5 h-3.5" style={{ color: accentLight }} />
+              <span className="text-xs sm:text-sm font-medium" style={{ color: accentPale }}>
                 أسعار محدثة لتكاليف التأسيس بالسعودية
               </span>
             </motion.div>
@@ -311,7 +312,7 @@ function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
-              className="font-medium text-sm sm:text-base mb-2" style={{ color: greenLight }}
+              className="font-medium text-sm sm:text-base mb-2" style={{ color: accentLight }}
             >
               Your Trusted Partner for Foreign Company Formation
             </motion.p>
@@ -333,8 +334,8 @@ function HeroSection() {
             >
               {['تأسيس شركة للأجانب', 'دعم كامل للإجراءات الحكومية', 'تسجيل المنصات الحكومية', 'دعم بالعربية والإنجليزية', 'أسعار واضحة واحترافية'].map((item, i) => (
                 <div key={item} className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(3,145,70,0.3)' }}>
-                    <CheckCircle2 className="w-3.5 h-3.5" style={{ color: greenLight }} />
+                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(3,3,77,0.2)' }}>
+                    <CheckCircle2 className="w-3.5 h-3.5" style={{ color: accentLight }} />
                   </div>
                   <span className="text-sm text-gray-300">{item}</span>
                 </div>
@@ -349,8 +350,8 @@ function HeroSection() {
             >
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-semibold rounded-2xl text-white transition-all hover:shadow-2xl hover:shadow-green-500/20 hover:scale-[1.02] active:scale-[0.98]"
-                style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}
+                className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-semibold rounded-2xl text-white transition-all hover:shadow-2xl hover:shadow-indigo-500/20 hover:scale-[1.02] active:scale-[0.98]"
+                style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}
               >
                 احجز استشارة مجانية
                 <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -361,7 +362,7 @@ function HeroSection() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-semibold rounded-2xl transition-all hover:bg-white/15 active:scale-[0.98] glass"
               >
-                <MessageCircle className="w-5 h-5" style={{ color: '#25D366' }} />
+                <MessageCircle className="w-5 h-5" style={{ color: accentLight }} />
                 <span className="text-white">تواصل عبر واتساب</span>
               </a>
             </motion.div>
@@ -388,7 +389,7 @@ function HeroSection() {
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="glass rounded-2xl p-5">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                         <Building2 className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -402,12 +403,12 @@ function HeroSection() {
                         animate={{ width: '65%' }}
                         transition={{ duration: 2, delay: 1, ease: 'easeOut' }}
                         className="h-full rounded-full"
-                        style={{ background: `linear-gradient(90deg, ${green}, ${greenLight})` }}
+                        style={{ background: `linear-gradient(90deg, ${navy}, ${accent})` }}
                       />
                     </div>
                     <div className="flex justify-between mt-2 text-xs text-gray-400">
                       <span>تقدم الإجراءات</span>
-                      <span style={{ color: greenLight }}>65%</span>
+                      <span style={{ color: accentLight }}>65%</span>
                     </div>
                   </div>
                 </div>
@@ -420,7 +421,7 @@ function HeroSection() {
                 className="absolute -top-4 -left-4 glass-dark rounded-2xl px-5 py-3.5 shadow-xl"
               >
                 <div className="flex items-center gap-2.5">
-                  <Shield className="w-5 h-5" style={{ color: greenLight }} />
+                  <Shield className="w-5 h-5" style={{ color: accentLight }} />
                   <div>
                     <div className="text-white text-xs font-semibold">معتمد من MISA</div>
                     <div className="text-gray-400 text-[10px]">رخصة استثمار أجنبي</div>
@@ -435,7 +436,7 @@ function HeroSection() {
                 className="absolute top-8 -right-6 glass-dark rounded-2xl px-4 py-3 shadow-xl"
               >
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4" style={{ color: greenLight }} />
+                  <TrendingUp className="w-4 h-4" style={{ color: accentLight }} />
                   <span className="text-white text-xs font-semibold">+500 شركة</span>
                 </div>
               </motion.div>
@@ -483,21 +484,21 @@ function WhySaudiSection() {
                 className="absolute -bottom-6 -right-4 md:right-6 glass-dark rounded-2xl px-6 py-4 shadow-xl"
               >
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-bold" style={{ color: greenLight }}>
+                  <div className="font-heading text-3xl font-bold" style={{ color: accentLight }}>
                     <AnimatedCounter target={2030} />
                   </div>
                   <div className="text-gray-300 text-xs mt-1">رؤية الاستثمار</div>
                 </div>
               </motion.div>
               {/* Floating accent */}
-              <div className="absolute -top-3 -left-3 w-20 h-20 rounded-2xl pulse-glow" style={{ backgroundColor: greenBg }} />
+              <div className="absolute -top-3 -left-3 w-20 h-20 rounded-2xl pulse-glow" style={{ backgroundColor: accentBg }} />
             </div>
           </RevealSection>
 
           {/* Right - Content */}
           <div>
             <RevealSection>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
                 <MapPin className="w-3 h-3" />
                 لماذا السعودية؟
               </span>
@@ -513,14 +514,14 @@ function WhySaudiSection() {
               {benefits.map((item) => (
                 <StaggerItem key={item.label}>
                   <div className="group flex items-center gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 cursor-default border border-transparent hover:border-gray-100">
-                    <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110" style={{ backgroundColor: greenBg }}>
-                      <item.icon className="w-5 h-5" style={{ color: green }} />
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110" style={{ backgroundColor: accentBg }}>
+                      <item.icon className="w-5 h-5" style={{ color: navy }} />
                     </div>
                     <div>
                       <div className="font-heading font-semibold text-sm" style={{ color: navy }}>{item.label}</div>
                       <div className="text-xs text-gray-400 mt-0.5">{item.desc}</div>
                     </div>
-                    <CheckCircle2 className="w-4 h-4 mr-auto opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: green }} />
+                    <CheckCircle2 className="w-4 h-4 mr-auto opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: accent }} />
                   </div>
                 </StaggerItem>
               ))}
@@ -549,7 +550,7 @@ function ServicesSection() {
     <section id="services" className="py-20 md:py-28 mesh-light relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealSection className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
             <Sparkles className="w-3 h-3" />
             خدماتنا
           </span>
@@ -564,10 +565,10 @@ function ServicesSection() {
             <StaggerItem key={service.title}>
               <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100/80 hover:border-transparent hover:shadow-xl transition-all duration-500 h-full hover:-translate-y-1">
                 {/* Hover gradient border effect */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(135deg, rgba(3,145,70,0.05), rgba(86,196,119,0.05))' }} />
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(135deg, rgba(3,3,77,0.04), rgba(45,45,181,0.04))' }} />
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md" style={{ backgroundColor: greenBg }}>
-                    <service.icon className="w-5 h-5 transition-colors" style={{ color: green }} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md" style={{ backgroundColor: accentBg }}>
+                    <service.icon className="w-5 h-5 transition-colors" style={{ color: navy }} />
                   </div>
                   <h3 className="font-heading font-semibold text-base mb-2" style={{ color: navy }}>{service.title}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed">{service.desc}</p>
@@ -595,7 +596,7 @@ function StepsSection() {
     <section id="steps" className="py-20 md:py-28 mesh-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealSection className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
             <TrendingUp className="w-3 h-3" />
             خطوات التأسيس
           </span>
@@ -607,7 +608,7 @@ function StepsSection() {
         {/* Modern horizontal scroll on mobile, vertical timeline on desktop */}
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-24 right-[calc(50%+2rem)] left-[calc(50%+2rem)] h-0.5" style={{ background: `linear-gradient(90deg, ${green}, ${greenLight}, ${greenPale})` }} />
+          <div className="hidden lg:block absolute top-24 right-[calc(50%+2rem)] left-[calc(50%+2rem)] h-0.5" style={{ background: `linear-gradient(90deg, ${navy}, ${accent}, ${accentPale})` }} />
 
           <StaggerContainer className="space-y-6 lg:space-y-0">
             {steps.map((step, i) => (
@@ -617,7 +618,7 @@ function StepsSection() {
                   <div className={`lg:py-6 ${i % 2 === 0 ? 'lg:text-left lg:order-1' : 'lg:order-3 lg:text-right'}`}>
                     <div className="glass-green rounded-2xl p-5 md:p-6 transition-all hover:shadow-md">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="font-heading text-2xl font-bold" style={{ color: green }}>{step.num}</span>
+                        <span className="font-heading text-2xl font-bold" style={{ color: navy }}>{step.num}</span>
                         <h3 className="font-heading font-semibold text-lg" style={{ color: navy }}>{step.title}</h3>
                       </div>
                       <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
@@ -625,7 +626,7 @@ function StepsSection() {
                   </div>
                   {/* Center node */}
                   <div className="hidden lg:flex items-center justify-center order-2 relative z-10">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                       <step.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -677,7 +678,7 @@ function PricingSection() {
     <section id="pricing" className="py-20 md:py-28 mesh-pricing relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealSection className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
             <Star className="w-3 h-3" />
             الباقات
           </span>
@@ -693,12 +694,12 @@ function PricingSection() {
                 plan.popular ? 'bg-white shadow-xl' : 'glass-green'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3.5 right-6 px-5 py-1.5 rounded-full text-xs font-bold text-white shadow-lg" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+                  <div className="absolute -top-3.5 right-6 px-5 py-1.5 rounded-full text-xs font-bold text-white shadow-lg" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                     الأكثر طلبًا
                   </div>
                 )}
 
-                {plan.popular && <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(3,145,70,0.02), rgba(86,196,119,0.02))' }} />}
+                {plan.popular && <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(3,3,77,0.03), rgba(45,45,181,0.02))' }} />}
 
                 <div className="relative z-10">
                   <span className="text-[10px] font-bold tracking-widest text-gray-400 uppercase block mb-1.5">{plan.name}</span>
@@ -713,7 +714,7 @@ function PricingSection() {
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: plan.popular ? green : '#9ca3af' }} />
+                        <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: plan.popular ? navy : '#9ca3af' }} />
                         <span className="text-sm text-gray-600">{feature}</span>
                       </li>
                     ))}
@@ -725,7 +726,7 @@ function PricingSection() {
                       plan.popular ? 'text-white' : ''
                     }`}
                     style={plan.popular
-                      ? { background: `linear-gradient(135deg, ${green}, ${greenLight})`, color: '#fff' }
+                      ? { background: `linear-gradient(135deg, ${navy}, ${accent})`, color: '#fff' }
                       : { backgroundColor: 'transparent', color: navy, border: `2px solid ${navy}` }
                     }
                   >
@@ -777,7 +778,7 @@ function WhyCorpentaSection() {
                   { num: 50, suffix: '+', label: 'جنسية مختلفة' },
                 ].map((stat, i) => (
                   <div key={i} className="glass rounded-2xl p-4 text-center">
-                    <div className="font-heading text-2xl font-bold" style={{ color: greenLight }}>
+                    <div className="font-heading text-2xl font-bold" style={{ color: accentLight }}>
                       <AnimatedCounter target={stat.num} suffix={stat.suffix} />
                     </div>
                     <div className="text-gray-300 text-xs mt-1">{stat.label}</div>
@@ -792,7 +793,7 @@ function WhyCorpentaSection() {
                 className="absolute top-6 -left-3 md:-left-6 glass-dark rounded-2xl px-4 py-3 shadow-xl"
               >
                 <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" style={{ color: greenLight }} />
+                  <Award className="w-5 h-5" style={{ color: accentLight }} />
                   <span className="text-white text-xs font-semibold">شريك موثوق</span>
                 </div>
               </motion.div>
@@ -802,7 +803,7 @@ function WhyCorpentaSection() {
           {/* Right - Content */}
           <div>
             <RevealSection>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: 'rgba(3,145,70,0.2)', color: greenLight }}>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: 'rgba(3,3,77,0.3)', color: accentLight }}>
                 <Award className="w-3 h-3" />
                 لماذا Corpenta؟
               </span>
@@ -816,8 +817,8 @@ function WhyCorpentaSection() {
               {reasons.map((reason) => (
                 <StaggerItem key={reason.title}>
                   <div className="group flex items-start gap-4 p-4 rounded-2xl glass hover:bg-white/10 transition-all duration-300 cursor-default">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110" style={{ backgroundColor: 'rgba(3,145,70,0.2)' }}>
-                      <reason.icon className="w-5 h-5" style={{ color: greenLight }} />
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110" style={{ backgroundColor: 'rgba(3,3,77,0.3)' }}>
+                      <reason.icon className="w-5 h-5" style={{ color: accentLight }} />
                     </div>
                     <div>
                       <h4 className="font-heading font-semibold text-base mb-1 text-white">{reason.title}</h4>
@@ -850,7 +851,7 @@ function FAQSection() {
     <section id="faq" className="py-20 md:py-28 mesh-light relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealSection className="text-center mb-12">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
             <MessageCircle className="w-3 h-3" />
             أسئلة شائعة
           </span>
@@ -919,7 +920,7 @@ function ContactSection() {
           {/* Left - CTA */}
           <RevealSection direction="right">
             <div>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: greenBg, color: green }}>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold mb-5" style={{ backgroundColor: accentBg, color: navy }}>
                 <Phone className="w-3 h-3" />
                 تواصل معنا
               </span>
@@ -932,7 +933,7 @@ function ContactSection() {
 
               <div className="space-y-3 mb-8">
                 <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 w-full p-4 rounded-2xl bg-white border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#25D366' }}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: navy }}>
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-right flex-1">
@@ -961,7 +962,7 @@ function ContactSection() {
                   { icon: Languages, text: 'عربي / إنجليزي' },
                 ].map((badge) => (
                   <div key={badge.text} className="flex items-center gap-1.5">
-                    <badge.icon className="w-4 h-4" style={{ color: green }} />
+                    <badge.icon className="w-4 h-4" style={{ color: navy }} />
                     <span className="text-xs text-gray-400">{badge.text}</span>
                   </div>
                 ))}
@@ -973,7 +974,7 @@ function ContactSection() {
           <RevealSection direction="left" delay={0.15}>
             <div className="relative">
               {/* Gradient border glow */}
-              <div className="absolute -inset-px rounded-3xl opacity-50" style={{ background: 'linear-gradient(135deg, rgba(3,145,70,0.2), rgba(86,196,119,0.1), rgba(3,3,77,0.1))' }} />
+              <div className="absolute -inset-px rounded-3xl opacity-50" style={{ background: 'linear-gradient(135deg, rgba(3,3,77,0.2), rgba(45,45,181,0.1), rgba(10,10,110,0.1))' }} />
               <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100/50">
                 {submitted ? (
                   <motion.div
@@ -981,8 +982,8 @@ function ContactSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: greenBg }}>
-                      <CheckCircle2 className="w-8 h-8" style={{ color: green }} />
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: accentBg }}>
+                      <CheckCircle2 className="w-8 h-8" style={{ color: navy }} />
                     </div>
                     <h3 className="font-heading font-semibold text-lg mb-2" style={{ color: navy }}>شكرًا لتواصلك!</h3>
                     <p className="text-sm text-gray-500">سنتواصل معك في أقرب وقت ممكن.</p>
@@ -991,21 +992,21 @@ function ContactSection() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium mb-1.5" style={{ color: navy }}>الاسم الكامل</label>
-                      <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': green } as React.CSSProperties} placeholder="أدخل اسمك" />
+                      <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': navy } as React.CSSProperties} placeholder="أدخل اسمك" />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-1.5" style={{ color: navy }}>البريد الإلكتروني</label>
-                        <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': green } as React.CSSProperties} placeholder="email@example.com" dir="ltr" />
+                        <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': navy } as React.CSSProperties} placeholder="email@example.com" dir="ltr" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-1.5" style={{ color: navy }}>رقم الهاتف</label>
-                        <input type="tel" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': green } as React.CSSProperties} placeholder="+966 5X XXX XXXX" dir="ltr" />
+                        <input type="tel" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': navy } as React.CSSProperties} placeholder="+966 5X XXX XXXX" dir="ltr" />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5" style={{ color: navy }}>نوع النشاط</label>
-                      <select value={formData.activity} onChange={(e) => setFormData({ ...formData, activity: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': green } as React.CSSProperties}>
+                      <select value={formData.activity} onChange={(e) => setFormData({ ...formData, activity: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all" style={{ '--tw-ring-color': navy } as React.CSSProperties}>
                         <option value="">اختر نوع النشاط</option>
                         <option value="consulting">استشارات</option>
                         <option value="trading">تجارة</option>
@@ -1017,9 +1018,9 @@ function ContactSection() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-1.5" style={{ color: navy }}>رسالتك</label>
-                      <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all resize-none" style={{ '--tw-ring-color': green } as React.CSSProperties} placeholder="أخبرنا عن مشروعك أو استفسارك..." />
+                      <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent bg-white/50 transition-all resize-none" style={{ '--tw-ring-color': navy } as React.CSSProperties} placeholder="أخبرنا عن مشروعك أو استفسارك..." />
                     </div>
-                    <button type="submit" className="w-full py-4 rounded-2xl text-white font-semibold text-sm transition-all hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+                    <button type="submit" className="w-full py-4 rounded-2xl text-white font-semibold text-sm transition-all hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                       أرسل استفسارك
                     </button>
                     <p className="text-[11px] text-gray-400 text-center">بالضغط على إرسال، أنت توافق على سياسة الخصوصية الخاصة بنا.</p>
@@ -1039,13 +1040,13 @@ function Footer() {
   return (
     <footer className="relative overflow-hidden" style={{ backgroundColor: navy }}>
       {/* Top gradient line */}
-      <div className="h-px w-full" style={{ background: `linear-gradient(90deg, transparent, ${green}, transparent)` }} />
+      <div className="h-px w-full" style={{ background: `linear-gradient(90deg, transparent, ${accent}, transparent)` }} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${green}, ${greenLight})` }}>
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}>
                 <span className="text-white font-heading font-bold text-sm">C</span>
               </div>
               <span className="font-heading font-bold text-xl text-white">Corpenta</span>
@@ -1066,7 +1067,7 @@ function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" style={{ color: greenLight }} />
+                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" style={{ color: accentLight }} />
                     {link.label}
                   </a>
                 </li>
@@ -1077,7 +1078,7 @@ function Footer() {
             <h4 className="font-heading font-semibold text-white mb-4">تواصل معنا</h4>
             <div className="space-y-3">
               <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-                <MessageCircle className="w-4 h-4" style={{ color: '#25D366' }} /> واتساب
+                <MessageCircle className="w-4 h-4" style={{ color: accentLight }} /> واتساب
               </a>
               <a href="tel:+966500000000" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" /> 966500000000+
@@ -1105,7 +1106,7 @@ function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl whatsapp-pulse transition-transform hover:scale-110"
-      style={{ background: `linear-gradient(135deg, #25D366, #128C7E)` }}
+      style={{ background: `linear-gradient(135deg, ${navy}, ${accent})` }}
       aria-label="تواصل عبر واتساب"
     >
       <MessageCircle className="w-6 h-6 text-white" />

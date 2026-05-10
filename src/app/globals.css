@@ -49,10 +49,10 @@
   --color-navy: #03034d;
   --color-navy-light: #0a0a6e;
   --color-navy-dark: #02023a;
-  --color-green: #039146;
-  --color-green-light: #56c477;
-  --color-green-pale: #c4f2d4;
-  --color-green-bg: #eafaf0;
+  --color-accent: #2d2db5;
+  --color-accent-light: #5b5bd6;
+  --color-accent-pale: #c8cce8;
+  --color-accent-bg: #ededfa;
 }
 
 :root {
@@ -69,16 +69,16 @@
   --secondary-foreground: #03034d;
   --muted: #f8f9fb;
   --muted-foreground: #6b7280;
-  --accent: #eafaf0;
-  --accent-foreground: #039146;
+  --accent: #ededfa;
+  --accent-foreground: #2d2db5;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #039146;
+  --ring: #2d2db5;
   --chart-1: #03034d;
-  --chart-2: #039146;
-  --chart-3: #56c477;
-  --chart-4: #c4f2d4;
+  --chart-2: #2d2db5;
+  --chart-3: #5b5bd6;
+  --chart-4: #c8cce8;
   --chart-5: #0a0a6e;
 }
 
@@ -148,40 +148,40 @@ html {
 }
 
 .glass-green {
-  background: rgba(3, 145, 70, 0.08);
+  background: rgba(3, 3, 77, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(3, 145, 70, 0.15);
+  border: 1px solid rgba(45, 45, 181, 0.12);
 }
 
 /* Mesh gradient backgrounds */
 .mesh-hero {
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(3, 145, 70, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(86, 196, 119, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(45, 45, 181, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(91, 91, 214, 0.1) 0%, transparent 50%),
     radial-gradient(ellipse at 60% 80%, rgba(10, 10, 110, 0.8) 0%, transparent 50%),
     linear-gradient(135deg, #03034d 0%, #0a0a6e 40%, #0d0d5c 70%, #03034d 100%);
 }
 
 .mesh-light {
   background: 
-    radial-gradient(ellipse at 10% 20%, rgba(3, 145, 70, 0.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 80%, rgba(86, 196, 119, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 20%, rgba(45, 45, 181, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(91, 91, 214, 0.06) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(3, 3, 77, 0.02) 0%, transparent 70%),
     #f8fafb;
 }
 
 .mesh-white {
   background: 
-    radial-gradient(ellipse at 0% 0%, rgba(196, 242, 212, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 0%, rgba(200, 204, 232, 0.25) 0%, transparent 50%),
     radial-gradient(ellipse at 100% 100%, rgba(3, 3, 77, 0.03) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(3, 145, 70, 0.02) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(45, 45, 181, 0.03) 0%, transparent 60%),
     #ffffff;
 }
 
 .mesh-pricing {
   background: 
-    radial-gradient(ellipse at 20% 80%, rgba(3, 145, 70, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(45, 45, 181, 0.06) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, rgba(3, 3, 77, 0.04) 0%, transparent 50%),
     #f8fafb;
 }
@@ -198,7 +198,7 @@ html {
   inset: -1px;
   border-radius: 1rem;
   padding: 1px;
-  background: linear-gradient(135deg, #039146, #56c477, #c4f2d4, #039146);
+  background: linear-gradient(135deg, #03034d, #2d2db5, #5b5bd6, #03034d);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -219,21 +219,21 @@ html {
 
 /* Pulse glow */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(3, 145, 70, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(3, 145, 70, 0.4); }
+  0%, 100% { box-shadow: 0 0 20px rgba(45, 45, 181, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(45, 45, 181, 0.4); }
 }
 .pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-/* WhatsApp floating button pulse */
-@keyframes pulse-green {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-  70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+/* Floating button pulse */
+@keyframes pulse-accent {
+  0% { box-shadow: 0 0 0 0 rgba(45, 45, 181, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(45, 45, 181, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(45, 45, 181, 0); }
 }
 .whatsapp-pulse {
-  animation: pulse-green 2s infinite;
+  animation: pulse-accent 2s infinite;
 }
 
 /* Shimmer effect */
@@ -282,7 +282,7 @@ html {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #56c477, #039146);
+  background: linear-gradient(135deg, #5b5bd6, #2d2db5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
