@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Alexandria } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 const alexandria = Alexandria({
   subsets: ["arabic", "latin"],
@@ -35,8 +36,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body className={`${alexandria.variable} antialiased bg-background text-foreground`}>
-        {children}
-        <Toaster />
+        <SmoothScrolling>
+          {children}
+          <Toaster />
+        </SmoothScrolling>
       </body>
     </html>
   );
