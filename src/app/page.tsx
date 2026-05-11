@@ -21,9 +21,9 @@ export default function Home() {
         <WhySaudiSection />
         <ServicesSection />
         <StepsSection />
-        <PricingSection />
-        <WhyCorpentaSection />
-        <FAQSection />
+        {/* <PricingSection /> */}
+        {/* <WhyCorpentaSection /> */}
+        {/* <FAQSection /> */}
         <ContactSection />
       </main>
       <Footer />
