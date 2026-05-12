@@ -42,8 +42,8 @@ export default function Design2Page() {
     border: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
     text: isDark ? '#ffffff' : '#0a0a1a',
     textSecondary: isDark ? '#9ca3af' : '#6b7280',
-    accent: isDark ? purple : blue,
-    accentLight: isDark ? '#818cf8' : blueLight,
+    accent: isDark ? purple : navy,
+    accentLight: isDark ? '#818cf8' : '#0a0a6e',
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -104,7 +104,7 @@ export default function Design2Page() {
               >
                 {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-indigo-600" />}
               </button>
-              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-lg text-sm font-bold text-white transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${blue}, ${blueLight})` }}>
+              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-lg text-sm font-bold text-white transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                 احجز استشارة
               </a>
             </div>
@@ -129,7 +129,7 @@ export default function Design2Page() {
               نساعد المستثمرين ورواد الأعمال الأجانب على تأسيس شركاتهم في السعودية بشكل قانوني واحترافي
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="px-8 py-4 rounded-xl text-white font-bold transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${blue}, ${blueLight})` }}>
+              <a href="#contact" className="px-8 py-4 rounded-xl text-white font-bold transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                 احجز استشارة مجانية
               </a>
               <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl font-bold border-2 transition-all hover:scale-105" style={{ borderColor: theme.border, backgroundColor: theme.card, color: theme.text }}>
@@ -338,7 +338,7 @@ export default function Design2Page() {
                 className="relative"
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full text-sm font-bold text-white z-10" style={{ background: `linear-gradient(135deg, ${blue}, ${blueLight})` }}>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full text-sm font-bold text-white z-10" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                     الأكثر طلبًا
                   </div>
                 )}
@@ -358,7 +358,7 @@ export default function Design2Page() {
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className={`block text-center py-4 rounded-xl font-bold transition-all hover:scale-105 ${plan.popular ? 'text-white' : 'border-2'}`} style={plan.popular ? { background: `linear-gradient(135deg, ${blue}, ${blueLight})` } : { borderColor: theme.border, color: theme.text }}>
+                  <a href="#contact" className={`block text-center py-4 rounded-xl font-bold transition-all hover:scale-105 ${plan.popular ? 'text-white' : 'border-2'}`} style={plan.popular ? { background: `linear-gradient(135deg, ${navy}, #0a0a6e)` } : { borderColor: theme.border, color: theme.text }}>
                     {plan.popular ? 'احجز استشارة' : 'ابدأ الآن'}
                   </a>
                 </div>
@@ -373,7 +373,7 @@ export default function Design2Page() {
         <div className="absolute inset-0 opacity-30 pointer-events-none">
           <MagicRings
             color={purple}
-            colorTwo={blue}
+            colorTwo={navy}
             ringCount={8}
             speed={0.8}
             attenuation={8}
@@ -418,7 +418,7 @@ export default function Design2Page() {
             >
               <div className="space-y-4 mb-8">
                 <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-6 rounded-2xl border transition-all" style={{ backgroundColor: theme.card, borderColor: theme.border }}>
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${blue}, ${blueLight})` }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                     <MessageCircle className="w-7 h-7 text-white" />
                   </div>
                   <div className="text-right flex-1">
@@ -557,7 +557,7 @@ export default function Design2Page() {
                       type="submit" 
                       disabled={loading}
                       className="w-full py-4 rounded-xl text-white font-bold transition-all hover:scale-105 disabled:opacity-50 disabled:hover:scale-100" 
-                      style={{ background: `linear-gradient(135deg, ${blue}, ${blueLight})` }}
+                      style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}
                     >
                       {loading ? 'جاري الإرسال...' : 'أرسل استفسارك'}
                     </button>
