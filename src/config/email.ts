@@ -10,7 +10,7 @@ export const EMAIL_CONFIG = {
   },
 
   // Recipient configuration
-  to: ['mohamedramy101@gmail.com'] as string[], // Change to sales@corpenta.com after domain verification
+  to: ['sales@corpenta.com'] as string[], // Change to sales@corpenta.com after domain verification
 
   // Logo URL
   logoUrl: 'https://i.ibb.co/dsJFm3qn/Corpenta-Logo-Dark.png',
