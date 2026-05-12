@@ -1,0 +1,67 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* Design 2 specific font styles */
+.design2-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* All text defaults to Medium (500) */
+.design2-page * {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Headings - ExtraBold (800) */
+.design2-page h1,
+.design2-page h2 {
+  font-weight: 800 !important;
+}
+
+/* Sub-headings - Bold (700) */
+.design2-page h3,
+.design2-page h4,
+.design2-page h5,
+.design2-page h6 {
+  font-weight: 700 !important;
+}
+
+/* Buttons and links - SemiBold (600) */
+.design2-page button,
+.design2-page a {
+  font-weight: 600 !important;
+}
+
+/* Navigation - SemiBold (600) */
+.design2-page nav a {
+  font-weight: 600 !important;
+}
+
+/* Labels - SemiBold (600) */
+.design2-page label,
+.design2-page .label {
+  font-weight: 600 !important;
+}
+
+/* Emphasized text - SemiBold (600) */
+.design2-page strong,
+.design2-page b,
+.design2-page .font-semibold,
+.design2-page .font-bold {
+  font-weight: 600 !important;
+}
+
+/* Body text, paragraphs, lists - Medium (500) */
+.design2-page p,
+.design2-page li,
+.design2-page span:not(.font-bold):not(.font-semibold),
+.design2-page div:not(.font-bold):not(.font-semibold) {
+  font-weight: 500 !important;
+}
+
+/* Input fields - Medium (500) */
+.design2-page input,
+.design2-page textarea,
+.design2-page select {
+  font-weight: 500 !important;
+}

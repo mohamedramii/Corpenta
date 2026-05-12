@@ -1,5 +1,6 @@
 'use client'
 
+import './design2.css'
 import { motion } from 'framer-motion'
 import { Shield, Building2, Rocket, Check, Star, FileText, Handshake, Users, Globe, Briefcase, Award, Zap, Languages, Clock, Phone, MessageCircle, ArrowLeft, ChevronDown, MapPin, Target, Sparkles, TrendingUp, CheckCircle2, Moon, Sun } from 'lucide-react'
 import { useState, useEffect } from 'react'
@@ -75,7 +76,7 @@ export default function Design2Page() {
   }
 
   return (
-    <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: theme.bg }}>
+    <div className="design2-page min-h-screen transition-colors duration-300" style={{ backgroundColor: theme.bg }}>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-sm transition-colors duration-300" style={{ backgroundColor: isDark ? 'rgba(10, 10, 26, 0.8)' : 'rgba(255, 255, 255, 0.8)', borderColor: theme.border }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,18 +122,18 @@ export default function Design2Page() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto mb-16"
           >
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight transition-colors" style={{ color: theme.text }}>
+            <h1 className="text-5xl md:text-7xl leading-tight transition-colors" style={{ color: theme.text, fontWeight: 800 }}>
               أسس شركتك في السعودية{' '}
               <span className="italic" style={{ color: theme.accent }}>بثقة ووضوح</span>
             </h1>
-            <p className="text-xl mb-8 leading-relaxed transition-colors" style={{ color: theme.textSecondary }}>
+            <p className="text-xl mb-8 leading-relaxed transition-colors" style={{ color: theme.textSecondary, fontWeight: 500 }}>
               نساعد المستثمرين ورواد الأعمال الأجانب على تأسيس شركاتهم في السعودية بشكل قانوني واحترافي
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="px-8 py-4 rounded-xl text-white font-bold transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
+              <a href="#contact" className="px-8 py-4 rounded-xl text-white transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)`, fontWeight: 600 }}>
                 احجز استشارة مجانية
               </a>
-              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl font-bold border-2 transition-all hover:scale-105" style={{ borderColor: theme.border, backgroundColor: theme.card, color: theme.text }}>
+              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl border-2 transition-all hover:scale-105" style={{ borderColor: theme.border, backgroundColor: theme.card, color: theme.text, fontWeight: 600 }}>
                 تواصل عبر واتساب
               </a>
             </div>
@@ -155,11 +156,11 @@ export default function Design2Page() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: theme.accent }}>
                   <card.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-1 transition-colors" style={{ color: theme.text }}>{card.title}</h3>
-                <p className="text-sm mb-4" style={{ color: gold }}>{card.desc}</p>
+                <h3 className="text-xl mb-1 transition-colors" style={{ color: theme.text, fontWeight: 700 }}>{card.title}</h3>
+                <p className="text-sm mb-4" style={{ color: gold, fontWeight: 500 }}>{card.desc}</p>
                 <div className="space-y-2">
                   {card.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-2 text-sm transition-colors" style={{ color: theme.textSecondary }}>
+                    <div key={feature} className="flex items-center gap-2 text-sm transition-colors" style={{ color: theme.textSecondary, fontWeight: 500 }}>
                       <Check className="w-4 h-4" style={{ color: theme.accent }} />
                       <span>{feature}</span>
                     </div>
@@ -180,11 +181,11 @@ export default function Design2Page() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-bold mb-4 inline-block" style={{ color: gold }}>لماذا السعودية؟</span>
-            <h2 className="font-heading text-4xl md:text-6xl font-bold mb-4 transition-colors" style={{ color: theme.text }}>
+            <span className="text-sm mb-4 inline-block" style={{ color: gold, fontWeight: 600 }}>لماذا السعودية؟</span>
+            <h2 className="text-4xl md:text-6xl mb-4 transition-colors" style={{ color: theme.text, fontWeight: 800 }}>
               السعودية من <span className="italic" style={{ color: theme.accent }}>أسرع الأسواق</span> نموًا
             </h2>
-            <p className="text-xl transition-colors" style={{ color: theme.textSecondary }}>توفر فرصًا قوية للمستثمرين الأجانب ضمن رؤية 2030</p>
+            <p className="text-xl transition-colors" style={{ color: theme.textSecondary, fontWeight: 500 }}>توفر فرصًا قوية للمستثمرين الأجانب ضمن رؤية 2030</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
