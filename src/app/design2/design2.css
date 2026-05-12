@@ -65,3 +65,33 @@
 .design2-page select {
   font-weight: 500 !important;
 }
+
+/* Floating WhatsApp Button Animation */
+@keyframes whatsapp-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsapp-float 3s ease-in-out infinite, whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  animation: whatsapp-pulse 2s infinite;
+}

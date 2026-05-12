@@ -420,7 +420,12 @@ export default function Design2Page() {
               <div className="space-y-4 mb-8">
                 <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-6 rounded-2xl border transition-all" style={{ backgroundColor: theme.card, borderColor: theme.border }}>
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
-                    <MessageCircle className="w-7 h-7 text-white" />
+                    <img 
+                      src="/whatsapp-icon.svg" 
+                      alt="WhatsApp" 
+                      className="w-7 h-7"
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
                   </div>
                   <div className="text-right flex-1">
                     <div className="font-bold transition-colors" style={{ color: theme.text }}>تواصل عبر واتساب</div>
@@ -587,7 +592,12 @@ export default function Design2Page() {
             </div>
             <div className="flex items-center gap-4">
               <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: theme.textSecondary }}>
-                <MessageCircle className="w-5 h-5" />
+                <img 
+                  src="/whatsapp-icon.svg" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5"
+                  style={{ filter: isDark ? 'brightness(0) invert(0.6)' : 'brightness(0) invert(0.4)' }}
+                />
               </a>
               <a href={`mailto:${CONTACT.email}`} className="transition-colors" style={{ color: theme.textSecondary }}>
                 <Phone className="w-5 h-5" />
@@ -596,6 +606,23 @@ export default function Design2Page() {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href={CONTACT.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 left-6 z-50 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95 whatsapp-float"
+        style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
+        aria-label="تواصل عبر واتساب"
+      >
+        <img 
+          src="/whatsapp-icon.svg" 
+          alt="WhatsApp" 
+          className="w-8 h-8"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
+      </a>
     </div>
   )
 }
