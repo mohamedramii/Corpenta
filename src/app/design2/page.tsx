@@ -583,7 +583,7 @@ export default function Design2Page() {
               />
             </div>
             <div className="text-sm text-center transition-colors" style={{ color: theme.textSecondary }}>
-              © 2024 Corpenta. جميع الحقوق محفوظة.
+              © 2026 Corpenta. جميع الحقوق محفوظة.
             </div>
             <div className="flex items-center gap-4">
               <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: theme.textSecondary }}>
