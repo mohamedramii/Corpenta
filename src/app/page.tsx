@@ -2,49 +2,29 @@
 
 import './design2/design2.css'
 import { motion } from 'framer-motion'
-import { Shield, Building2, Rocket, Check, Star, FileText, Handshake, Users, Globe, Briefcase, Award, Zap, Languages, Clock, Phone, MessageCircle, ArrowLeft, ChevronDown, MapPin, Target, Sparkles, TrendingUp, CheckCircle2, Moon, Sun } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
-import AnimatedCounter from '@/components/AnimatedCounter'
-import BorderGlow from '@/components/BorderGlow'
+import { Shield, Building2, Rocket, Check, Star, FileText, Handshake, Users, Globe, Briefcase, Zap, Languages, Phone, ArrowLeft, Target, CheckCircle2 } from 'lucide-react'
+import { useState } from 'react'
 import MagicRings from '@/components/MagicRings'
-import { navy, blue, blueLight, bluePale, accentBg, IMG, CONTACT } from '@/lib/constants'
+import { navy, CONTACT } from '@/lib/constants'
+import { ASSETS } from '@/lib/paths'
 
 const gold = '#d4af37'
-const purple = '#6366f1'
 
 export default function Design2Page() {
-  const [isDark, setIsDark] = useState(true)
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', activity: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  // Load theme preference from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('design2-theme')
-    if (savedTheme) {
-      setIsDark(savedTheme === 'dark')
-    }
-  }, [])
-
-  // Save theme preference
-  const toggleTheme = () => {
-    const newTheme = !isDark
-    setIsDark(newTheme)
-    localStorage.setItem('design2-theme', newTheme ? 'dark' : 'light')
-  }
-
-  // Theme colors
+  // Light theme colors only
   const theme = {
-    bg: isDark ? '#0a0a1a' : '#ffffff',
-    card: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
-    border: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-    text: isDark ? '#ffffff' : '#0a0a1a',
-    textSecondary: isDark ? '#9ca3af' : '#6b7280',
-    accent: isDark ? purple : navy,
-    accentLight: isDark ? '#818cf8' : '#0a0a6e',
+    bg: '#ffffff',
+    card: 'rgba(0, 0, 0, 0.02)',
+    border: 'rgba(0, 0, 0, 0.1)',
+    text: '#0a0a1a',
+    textSecondary: '#6b7280',
+    accent: navy,
+    accentLight: '#0a0a6e',
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -78,15 +58,14 @@ export default function Design2Page() {
   return (
     <div className="design2-page min-h-screen transition-colors duration-300" style={{ backgroundColor: theme.bg }}>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-sm transition-colors duration-300" style={{ backgroundColor: isDark ? 'rgba(10, 10, 26, 0.8)' : 'rgba(255, 255, 255, 0.8)', borderColor: theme.border }}>
+      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-sm transition-colors duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', borderColor: theme.border }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2">
               <img 
-                src="/Corpenta-Logo-Dark.png" 
+                src={ASSETS.logo} 
                 alt="Corpenta" 
-                className="h-10 w-auto transition-all" 
-                style={{ filter: isDark ? 'invert(1) brightness(2)' : 'none' }}
+                className="h-10 w-auto transition-all"
               />
             </div>
             <nav className="hidden md:flex items-center gap-8">
@@ -97,14 +76,6 @@ export default function Design2Page() {
               ))}
             </nav>
             <div className="flex items-center gap-4">
-              <button
-                onClick={toggleTheme}
-                className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
-                style={{ backgroundColor: theme.card, borderWidth: '1px', borderColor: theme.border }}
-                aria-label="Toggle theme"
-              >
-                {isDark ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-indigo-600" />}
-              </button>
               <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-lg text-sm font-bold text-white transition-all hover:scale-105" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                 احجز استشارة
               </a>
@@ -120,9 +91,9 @@ export default function Design2Page() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto mb-16"
+            className="text-center max-w-5xl mx-auto mb-16"
           >
-            <h1 className="text-5xl md:text-7xl leading-tight transition-colors" style={{ color: theme.text, fontWeight: 800 }}>
+            <h1 className="text-5xl md:text-7xl leading-tight transition-colors" style={{ color: theme.text, fontWeight: 500 }}>
               أسس شركتك في السعودية{' '}
               <span className="italic" style={{ color: theme.accent }}>بثقة ووضوح</span>
             </h1>
@@ -371,9 +342,9 @@ export default function Design2Page() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute inset-0 opacity-50 pointer-events-none">
           <MagicRings
-            color={purple}
+            color={navy}
             colorTwo={navy}
             ringCount={8}
             speed={0.8}
@@ -421,7 +392,7 @@ export default function Design2Page() {
                 <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-6 rounded-2xl border transition-all" style={{ backgroundColor: theme.card, borderColor: theme.border }}>
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${navy}, #0a0a6e)` }}>
                     <img 
-                      src="/whatsapp-icon.svg" 
+                      src={ASSETS.whatsappIcon} 
                       alt="WhatsApp" 
                       className="w-7 h-7"
                       style={{ filter: 'brightness(0) invert(1)' }}
@@ -472,7 +443,7 @@ export default function Design2Page() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: isDark ? 'rgba(99, 102, 241, 0.2)' : 'rgba(37, 99, 235, 0.1)' }}>
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(37, 99, 235, 0.1)' }}>
                       <CheckCircle2 className="w-10 h-10" style={{ color: theme.accent }} />
                     </div>
                     <h3 className="font-bold text-2xl mb-2 transition-colors" style={{ color: theme.text }}>شكرًا لتواصلك!</h3>
@@ -581,10 +552,9 @@ export default function Design2Page() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
               <img 
-                src="/Corpenta-Logo-Dark.png" 
+                src={ASSETS.logo} 
                 alt="Corpenta" 
-                className="h-8 w-auto transition-all" 
-                style={{ filter: isDark ? 'invert(1) brightness(2)' : 'none' }}
+                className="h-8 w-auto transition-all"
               />
             </div>
             <div className="text-sm text-center transition-colors" style={{ color: theme.textSecondary }}>
@@ -593,10 +563,10 @@ export default function Design2Page() {
             <div className="flex items-center gap-4">
               <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: theme.textSecondary }}>
                 <img 
-                  src="/whatsapp-icon.svg" 
+                  src={ASSETS.whatsappIcon} 
                   alt="WhatsApp" 
                   className="w-5 h-5"
-                  style={{ filter: isDark ? 'brightness(0) invert(0.6)' : 'brightness(0) invert(0.4)' }}
+                  style={{ filter: 'brightness(0) invert(0.4)' }}
                 />
               </a>
               <a href={`mailto:${CONTACT.email}`} className="transition-colors" style={{ color: theme.textSecondary }}>
@@ -617,7 +587,7 @@ export default function Design2Page() {
         aria-label="تواصل عبر واتساب"
       >
         <img 
-          src="/whatsapp-icon.svg" 
+          src={ASSETS.whatsappIcon} 
           alt="WhatsApp" 
           className="w-8 h-8"
           style={{ filter: 'brightness(0) invert(1)' }}

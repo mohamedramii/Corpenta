@@ -9,6 +9,9 @@ const alexandria = Alexandria({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-alexandria",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
