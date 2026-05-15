@@ -25,8 +25,9 @@ export const IMG = {
 /* ─── Contact Info ─── */
 export const CONTACT = {
   whatsapp: 'https://wa.me/966548551981',
-  phone: '+966548551981',
-  phoneDisplay: '+966 54 855 1981',
+  phone: '+966544531981',
+  phoneDisplay: '+966 54 453 1981',
   email: 'sales@corpenta.com',
   website: 'https://corpenta.com',
+  aboutUs: 'https://corpenta.com/about-us/',
 }

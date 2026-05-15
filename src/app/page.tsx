@@ -2,13 +2,36 @@
 
 import './design2/design2.css'
 import { motion } from 'framer-motion'
-import { Shield, Building2, Rocket, Check, Star, FileText, Handshake, Users, Globe, Briefcase, Zap, Languages, Phone, ArrowLeft, Target, CheckCircle2 } from 'lucide-react'
+import { Shield, Building2, Rocket, Check, Star, FileText, Handshake, Users, Globe, Briefcase, Zap, Languages, Phone, ArrowLeft, Target, CheckCircle2, X } from 'lucide-react'
 import { useState } from 'react'
 import MagicRings from '@/components/MagicRings'
 import { navy, CONTACT } from '@/lib/constants'
 import { ASSETS } from '@/lib/paths'
 
 const gold = '#d4af37'
+
+const comparisonRows = [
+  { label: 'رخصة الاستثمار (MISA)', f: true, o: true, v: true },
+  { label: 'السجل التجاري', f: true, o: true, v: true },
+  { label: 'عقد التأسيس', f: true, o: true, v: true },
+  { label: 'تسجيل الغرفة التجارية', f: true, o: true, v: true },
+  { label: 'تسجيل GOSI', f: true, o: true, v: true },
+  { label: 'Qiwa', f: false, o: true, v: true },
+  { label: 'ZATCA', f: false, o: true, v: true },
+  { label: 'تأشيرة المدير العام', f: false, o: true, v: true },
+  { label: 'دعم الحساب البنكي', f: false, o: false, v: 'موسع' },
+  { label: 'مدير ملف مخصص', f: true, o: true, v: true },
+  { label: 'دعم تشغيلي', f: 'أساسي', o: true, v: 'موسع' },
+  { label: 'أولوية المتابعة الحكومية', f: false, o: false, v: true },
+  { label: 'المساعدة في الإقامة', f: false, o: false, v: true },
+  { label: '6 أشهر دعم ما بعد التأسيس', f: false, o: false, v: true },
+]
+
+function CellValue({ val }: { val: boolean | string }) {
+  if (val === true) return <Check className="w-4 h-4 mx-auto" style={{ color: navy }} />
+  if (val === false) return <X className="w-3 h-3 mx-auto text-gray-300" />
+  return <span className="text-xs font-semibold" style={{ color: gold }}>{val}</span>
+}
 
 export default function Design2Page() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', activity: '', message: '' })
@@ -62,15 +85,32 @@ export default function Design2Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2">
+             <a
+  href="https://corpenta.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
               <img 
                 src={ASSETS.logo} 
                 alt="Corpenta" 
                 className="h-10 w-auto transition-all"
               />
+              </a>
             </div>
             <nav className="hidden md:flex items-center gap-8">
-              {['الخدمات', 'الباقات', 'من نحن', 'تواصل'].map((item, i) => (
-                <a key={item} href={`#${['services', 'pricing', 'about', 'contact'][i]}`} className="text-sm font-medium transition-colors" style={{ color: theme.textSecondary }}>
+              {[
+                ['الخدمات', '#services'],
+                ['الباقات', '#pricing'],
+                ['من نحن', CONTACT.aboutUs],
+                ['تواصل', '#contact']
+              ].map(([item, href]) => (
+                <a 
+                  key={item} 
+                  href={href}
+                  {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="text-sm font-medium transition-colors" 
+                  style={{ color: theme.textSecondary }}
+                >
                   {item}
                 </a>
               ))}
@@ -337,6 +377,33 @@ export default function Design2Page() {
               </motion.div>
             ))}
           </div>
+
+          {/* Comparison Table */}
+          <div className="mt-16">
+            <h3 className="text-xl font-bold mb-6 text-center transition-colors" style={{ color: navy }}>مقارنة تفصيلية للباقات</h3>
+            <div className="rounded-2xl border overflow-hidden overflow-x-auto transition-colors" style={{ borderColor: theme.border }}>
+              <table className="w-full">
+                <thead>
+                  <tr style={{ backgroundColor: navy }}>
+                    <th className="text-right text-xs text-white p-4">الخدمة</th>
+                    <th className="text-xs text-white p-4 text-center">Foundation</th>
+                    <th className="text-xs text-white p-4 text-center">Operational</th>
+                    <th className="text-xs text-white p-4 text-center">VIP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row, i) => (
+                    <tr key={row.label} style={{ backgroundColor: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)' }}>
+                      <td className="text-xs p-3 text-right transition-colors" style={{ color: '#374151' }}>{row.label}</td>
+                      <td className="p-3"><CellValue val={row.f} /></td>
+                      <td className="p-3"><CellValue val={row.o} /></td>
+                      <td className="p-3"><CellValue val={row.v} /></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -346,20 +413,20 @@ export default function Design2Page() {
           <MagicRings
             color={navy}
             colorTwo={navy}
-            ringCount={8}
-            speed={0.8}
-            attenuation={8}
-            lineThickness={2}
-            baseRadius={0.4}
-            radiusStep={0.12}
-            scaleRate={0.15}
-            opacity={1}
+            ringCount={5}
+            speed={0.5}
+            attenuation={10}
+            lineThickness={1.5}
+            baseRadius={0.5}
+            radiusStep={0.15}
+            scaleRate={0.1}
+            opacity={0.8}
             blur={0}
-            noiseAmount={0.05}
+            noiseAmount={0.03}
             rotation={0}
-            ringGap={1.8}
-            fadeIn={0.6}
-            fadeOut={0.4}
+            ringGap={2}
+            fadeIn={0.8}
+            fadeOut={0.5}
             followMouse={false}
             mouseInfluence={0}
             hoverScale={1}
