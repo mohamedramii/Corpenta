@@ -18,16 +18,16 @@ export default function ContactSection() {
     setError('')
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://formspree.io/f/xpqnjrdv', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(formData),
       })
 
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error || 'حدث خطأ في إرسال الرسالة')
+        throw new Error(data.errors?.[0]?.message || 'حدث خطأ في إرسال الرسالة')
       }
 
       setSubmitted(true)

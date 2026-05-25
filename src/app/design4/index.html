@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Înființare Companie în Arabia Saudită | Corpenta</title>
+    <meta name="description" content="Corpenta vă ajută să înființați o companie în Arabia Saudită. Licență de investiții, înregistrare comercială și suport complet în limba română.">
+    
+    <!-- Google Tag Manager placeholder -->
+    <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXX');</script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========================================
+           DESIGN SYSTEM & TOKENS
+        ======================================== */
+        :root {
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-pill: 100px;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --transition-fast: 0.2s var(--ease-out);
+            --transition-base: 0.4s var(--ease-out);
+            --transition-slow: 0.7s var(--ease-out);
+        }
+
+        /* ---- DARK THEME (default) ---- */
+        [data-theme="dark"] {
+            --bg-primary: #06080e;
+            --bg-secondary: #0c0f1a;
+            --bg-tertiary: #111528;
+            --bg-card: rgba(255,255,255,0.03);
+            --bg-card-hover: rgba(255,255,255,0.06);
+            --bg-glass: rgba(12,15,26,0.8);
+            --border-subtle: rgba(255,255,255,0.06);
+            --border-medium: rgba(255,255,255,0.10);
+            --border-accent: rgba(93,120,255,0.3);
+            --text-primary: #f0f2ff;
+            --text-secondary: rgba(240,242,255,0.65);
+            --text-tertiary: rgba(240,242,255,0.38);
+            --text-inverse: #06080e;
+            --accent: #5d78ff;
+            --accent-glow: rgba(93,120,255,0.15);
+            --accent-glow-strong: rgba(93,120,255,0.25);
+            --accent-hover: #7b92ff;
+            --gold: #d4a853;
+            --gold-soft: rgba(212,168,83,0.12);
+            --gold-text: #e8c47a;
+            --success: #34d399;
+            --error: #f87171;
+            --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(93,120,255,0.12), transparent),
+                             radial-gradient(ellipse 60% 50% at 80% 50%, rgba(212,168,83,0.04), transparent);
+            --gradient-accent: linear-gradient(135deg, #5d78ff 0%, #8b5cf6 100%);
+            --gradient-gold: linear-gradient(135deg, #d4a853 0%, #f0d890 100%);
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.03);
+            --shadow-card-hover: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+            --shadow-glow: 0 0 40px rgba(93,120,255,0.12);
+            --noise-opacity: 0.03;
+        }
+
+        /* ---- LIGHT THEME ---- */
+        [data-theme="light"] {
+            --bg-primary: #f8f9fc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #eef0f8;
+            --bg-card: rgba(255,255,255,0.9);
+            --bg-card-hover: rgba(255,255,255,1);
+            --bg-glass: rgba(248,249,252,0.85);
+            --border-subtle: rgba(10,15,60,0.06);
+            --border-medium: rgba(10,15,60,0.10);
+            --border-accent: rgba(93,120,255,0.25);
+            --text-primary: #0a0f3c;
+            --text-secondary: rgba(10,15,60,0.60);
+            --text-tertiary: rgba(10,15,60,0.35);
+            --text-inverse: #ffffff;
+            --accent: #3d5af1;
+            --accent-glow: rgba(61,90,241,0.08);
+            --accent-glow-strong: rgba(61,90,241,0.14);
+            --accent-hover: #2d4ae0;
+            --gold: #b8922e;
+            --gold-soft: rgba(184,146,46,0.08);
+            --gold-text: #8a6d1b;
+            --success: #059669;
+            --error: #dc2626;
+            --gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(61,90,241,0.06), transparent),
+                             radial-gradient(ellipse 60% 50% at 80% 50%, rgba(184,146,46,0.03), transparent);
+            --gradient-accent: linear-gradient(135deg, #3d5af1 0%, #6d5ce7 100%);
+            --gradient-gold: linear-gradient(135deg, #b8922e 0%, #d4b05c 100%);
+            --shadow-card: 0 1px 4px rgba(10,15,60,0.06), 0 0 0 1px rgba(10,15,60,0.04);
+            --shadow-card-hover: 0 20px 50px rgba(10,15,60,0.10), 0 0 0 1px rgba(10,15,60,0.06);
+            --shadow-glow: 0 0 40px rgba(61,90,241,0.06);
+            --noise-opacity: 0.015;
+        }
+
+        /* ========================================
+           RESET & BASE
+        ======================================== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { 
+            scroll-behavior: smooth; 
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-weight: 400;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background var(--transition-base), color var(--transition-base);
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+            opacity: var(--noise-opacity);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--text-inverse);
+        }
+
+        /* ========================================
+           LAYOUT
+        ======================================== */
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .sect {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* ========================================
+           THEME TOGGLE
+        ======================================== */
+        .theme-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            color: var(--text-secondary);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: scale(1.08);
+        }
+
+        .theme-toggle svg { width: 20px; height: 20px; transition: all var(--transition-fast); }
+        .theme-toggle .icon-sun { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+        [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+        [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+        /* ========================================
+           TYPOGRAPHY
+        ======================================== */
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-text);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .heading-xl {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .heading-lg {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+            color: var(--text-primary);
+        }
+
+        .heading-md {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            font-weight: 400;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+
+        .body-lg {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .body-md {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        .em-accent {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .em-gold {
+            color: var(--gold-text);
+        }
+
+        /* ========================================
+           BUTTONS
+        ======================================== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 17px 38px;
+            background: var(--gradient-accent);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border: none;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(93,120,255,0.35);
+        }
+
+        .btn-primary:hover::before { opacity: 1; }
+
+        .btn-primary svg {
+            width: 16px;
+            height: 16px;
+            transition: transform var(--transition-fast);
+        }
+
+        .btn-primary:hover svg { transform: translateX(4px); }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            font-weight: 500;
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-glow);
+        }
+
+        /* ========================================
+           HERO
+        ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-hero);
+            pointer-events: none;
+        }
+
+        /* Animated orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: var(--accent-glow-strong);
+            top: -15%; right: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 350px; height: 350px;
+            background: var(--gold-soft);
+            bottom: -10%; left: -5%;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 200px; height: 200px;
+            background: var(--accent-glow);
+            top: 40%; left: 30%;
+            animation-delay: -14s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(20px, -30px) scale(1.05); }
+            66% { transform: translate(-15px, 20px) scale(0.95); }
+        }
+
+        /* Grid lines */
+        .grid-lines {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .grid-lines::before,
+        .grid-lines::after {
+            content: '';
+            position: absolute;
+            background: var(--border-subtle);
+        }
+
+        .grid-lines::before {
+            width: 1px;
+            height: 100%;
+            left: 25%;
+        }
+
+        .grid-lines::after {
+            width: 1px;
+            height: 100%;
+            right: 25%;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-logo {
+            margin-bottom: 56px;
+            opacity: 0;
+            animation: fadeSlide 0.8s var(--ease-out) 0.2s forwards;
+        }
+
+        .hero-logo img {
+            height: 44px;
+            width: auto;
+        }
+
+        .hero-logo .logo-dark { display: block; }
+        .hero-logo .logo-light { display: none; }
+        [data-theme="light"] .hero-logo .logo-dark { display: none; }
+        [data-theme="light"] .hero-logo .logo-light { display: block; }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            background: var(--gold-soft);
+            border: 1px solid rgba(212,168,83,0.15);
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gold-text);
+            letter-spacing: 0.8px;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeSlide 0.8s var(--ease-out) 0.4s forwards;
+        }
+
+        .hero-tag-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .hero h1 {
+            opacity: 0;
+            animation: fadeSlide 1s var(--ease-out) 0.5s forwards;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-desc {
+            margin: 28px 0 44px;
+            max-width: 520px;
+            opacity: 0;
+            animation: fadeSlide 1s var(--ease-out) 0.7s forwards;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeSlide 1s var(--ease-out) 0.9s forwards;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin-top: 72px;
+            background: var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeSlide 1s var(--ease-out) 1.1s forwards;
+        }
+
+        .hero-metric {
+            padding: 28px 24px;
+            background: var(--bg-card);
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-metric-val {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .hero-metric-val .accent { color: var(--accent); }
+
+        .hero-metric-lbl {
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-tertiary);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeSlide 1s var(--ease-out) 1.5s forwards;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.3; transform: scaleY(0.5); }
+        }
+
+        /* ========================================
+           SECTION DIVIDER
+        ======================================== */
+        .divider-line {
+            width: 100%;
+            height: 1px;
+            background: var(--border-subtle);
+        }
+
+        /* ========================================
+           WHY SAUDI
+        ======================================== */
+        .why-saudi { background: var(--bg-secondary); }
+
+        .sect-header {
+            max-width: 580px;
+            margin-bottom: 60px;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+
+        .bento-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, var(--accent-glow) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .bento-item:hover {
+            border-color: var(--border-accent);
+            background: var(--bg-card-hover);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-4px);
+        }
+
+        .bento-item:hover::before { opacity: 1; }
+
+        .bento-item > * { position: relative; z-index: 1; }
+
+        .bento-wide { grid-column: span 3; }
+        .bento-narrow { grid-column: span 2; }
+
+        .bento-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: background var(--transition-fast);
+        }
+
+        .bento-item:hover .bento-icon {
+            background: var(--accent-glow-strong);
+        }
+
+        .bento-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--accent);
+        }
+
+        .bento-icon.gold {
+            background: var(--gold-soft);
+        }
+
+        .bento-icon.gold svg { color: var(--gold); }
+
+        .bento-item h3 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .bento-item p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           WHAT CORPENTA DOES
+        ======================================== */
+        .what-section { background: var(--bg-primary); }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0;
+            margin-top: 48px;
+        }
+
+        .service-entry {
+            display: contents;
+        }
+
+        .service-marker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 32px 0 0;
+        }
+
+        .service-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            background: var(--bg-primary);
+            flex-shrink: 0;
+            margin-top: 6px;
+            transition: all var(--transition-fast);
+        }
+
+        .service-entry:hover .service-dot {
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent-glow-strong);
+        }
+
+        .service-line {
+            width: 1px;
+            flex: 1;
+            background: var(--border-subtle);
+            margin: 8px 0;
+        }
+
+        .service-entry:last-child .service-line { display: none; }
+
+        .service-block {
+            padding: 0 0 48px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .service-entry:last-child .service-block { padding-bottom: 0; }
+
+        .service-block h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            transition: color var(--transition-fast);
+        }
+
+        .service-entry:hover .service-block h3 {
+            color: var(--accent);
+        }
+
+        .service-block p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            font-weight: 300;
+            max-width: 500px;
+        }
+
+        .cta-mid {
+            text-align: center;
+            margin-top: 64px;
+        }
+
+        /* ========================================
+           HOW IT WORKS
+        ======================================== */
+        .how-section {
+            background: var(--bg-secondary);
+        }
+
+        .process-track {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px 28px 32px;
+            position: relative;
+            transition: all var(--transition-base);
+            overflow: hidden;
+        }
+
+        .process-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-base);
+        }
+
+        .process-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .process-card:hover::after { transform: scaleX(1); }
+
+        .process-num {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--border-subtle);
+            line-height: 1;
+            margin-bottom: 20px;
+            transition: color var(--transition-fast);
+        }
+
+        .process-card:hover .process-num { color: var(--accent-glow-strong); }
+
+        .process-card h3 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        .timeline-bar {
+            margin-top: 32px;
+            padding: 20px 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .timeline-bar span {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .timeline-bar strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* ========================================
+           WHO IS THIS FOR
+        ======================================== */
+        .who-section { background: var(--bg-primary); }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 56px;
+        }
+
+        .audience-card {
+            display: flex;
+            gap: 20px;
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .audience-card:hover {
+            border-color: var(--border-accent);
+            background: var(--bg-card-hover);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .audience-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .audience-icon svg {
+            width: 22px;
+            height: 22px;
+            color: #fff;
+        }
+
+        .audience-card h3 {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .audience-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           TRUST SECTION
+        ======================================== */
+        .trust-section { background: var(--bg-secondary); }
+
+        .trust-pillars {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            margin-top: 56px;
+            background: var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .trust-pillar {
+            padding: 40px 24px;
+            background: var(--bg-card);
+            text-align: center;
+            transition: background var(--transition-base);
+        }
+
+        .trust-pillar:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .trust-pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+
+        .trust-pillar-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--accent);
+        }
+
+        .trust-pillar h3 {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .trust-pillar p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .direct-banner {
+            margin-top: 48px;
+            padding: 48px 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .direct-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+        }
+
+        .direct-banner h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+
+        .direct-banner h3 em {
+            font-style: italic;
+            color: var(--gold-text);
+        }
+
+        .direct-banner p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           FORM SECTION
+        ======================================== */
+        .form-section {
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-section .orb-1 {
+            width: 400px; height: 400px;
+            top: auto; bottom: -20%;
+            right: -10%;
+        }
+
+        .form-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .form-left { padding-top: 16px; }
+
+        .form-left .heading-lg {
+            margin-bottom: 20px;
+        }
+
+        .form-left .body-lg {
+            margin-bottom: 40px;
+            max-width: 420px;
+        }
+
+        .form-checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .form-check-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(52,211,153,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .form-check-icon svg {
+            width: 13px;
+            height: 13px;
+            color: var(--success);
+        }
+
+        .form-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-xl);
+            padding: 44px 36px;
+            box-shadow: var(--shadow-card-hover);
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-card-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-card-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .form-card-header p {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group.full { grid-column: 1 / -1; }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-label .req { color: var(--accent); }
+        .form-label .opt { color: var(--text-tertiary); font-weight: 400; font-size: 0.75rem; }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 13px 16px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            outline: none;
+            transition: all var(--transition-fast);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--text-tertiary);
+        }
+
+        .form-select {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238a90a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 72px;
+        }
+
+        .form-hint {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 8px;
+            padding: 16px;
+            background: var(--gradient-accent);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            letter-spacing: 0.3px;
+        }
+
+        .form-submit:hover {
+            box-shadow: 0 8px 28px rgba(93,120,255,0.35);
+            transform: translateY(-2px);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            line-height: 1.6;
+        }
+
+        /* Success state */
+        .form-success {
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .form-success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(52,211,153,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .form-success-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--success);
+        }
+
+        .form-success h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .form-success p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+        .lp-footer {
+            padding: 28px 0;
+            border-top: 1px solid var(--border-subtle);
+            background: var(--bg-primary);
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-row p {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-loc {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-loc svg {
+            width: 13px;
+            height: 13px;
+            color: var(--text-tertiary);
+        }
+
+        /* ========================================
+           SCROLL ANIMATIONS
+        ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-delay-1 { transition-delay: 0.08s; }
+        .reveal-delay-2 { transition-delay: 0.16s; }
+        .reveal-delay-3 { transition-delay: 0.24s; }
+        .reveal-delay-4 { transition-delay: 0.32s; }
+        .reveal-delay-5 { transition-delay: 0.40s; }
+        .reveal-delay-6 { transition-delay: 0.48s; }
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+        @media (max-width: 900px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bento-wide, .bento-narrow { grid-column: span 1; }
+            
+            .process-track { grid-template-columns: repeat(2, 1fr); }
+            .trust-pillars { grid-template-columns: repeat(2, 1fr); }
+            .form-layout { grid-template-columns: 1fr; gap: 48px; }
+        }
+
+        @media (max-width: 680px) {
+            .sect { padding: 72px 0; }
+            .container { padding: 0 20px; }
+
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .hero-metrics { grid-template-columns: 1fr; }
+
+            .bento-grid { grid-template-columns: 1fr; }
+            .process-track { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .trust-pillars { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-card { padding: 32px 24px; }
+
+            .grid-lines::before, .grid-lines::after { display: none; }
+
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-outline { justify-content: center; }
+
+            .direct-banner { padding: 32px 24px; }
+
+            .footer-row { flex-direction: column; text-align: center; }
+            
+            .scroll-hint { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Schimbă tema">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-lines"></div>
+    
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-logo">
+                <img class="logo-dark" src="https://corpenta.com/wp-content/uploads/2025/12/logo-corpenta.png-white.png" alt="Corpenta – Company Formation Experts" height="44">
+                <img class="logo-light" src="https://corpenta.com/wp-content/uploads/2025/12/Corpenta-Logo-Dark.png" alt="Corpenta – Company Formation Experts" height="44">
+            </div>
+
+            <div class="hero-tag">
+                <span class="hero-tag-dot"></span>
+                Experți în înființarea companiilor în Arabia Saudită
+            </div>
+
+            <h1 class="heading-xl">
+                Compania ta în <em>Arabia Saudită</em> — fără birocrație
+            </h1>
+
+            <p class="body-lg hero-desc">
+                Gestionăm întregul proces de înregistrare: de la licența MISA până la contul bancar corporate — cu suport complet în limba română.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#formular" class="btn-primary">
+                    Solicită o consultație
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <div class="hero-metric-val"><span class="accent">100</span>%</div>
+                    <div class="hero-metric-lbl">Proprietate străină permisă</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="hero-metric-val"><span class="accent">0</span>%</div>
+                    <div class="hero-metric-lbl">Impozit pe salarii (în general)</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="hero-metric-val"><span class="accent">6</span></div>
+                    <div class="hero-metric-lbl">Limbi de suport, inclusiv română</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        scroll
+    </div>
+</section>
+
+<!-- ==================== WHY SAUDI ARABIA ==================== -->
+<section class="sect why-saudi" id="de-ce-saudi">
+    <div class="container">
+        <div class="sect-header reveal">
+            <span class="eyebrow">De ce Arabia Saudită</span>
+            <h2 class="heading-lg">Cea mai mare economie din Orient — <em class="em-accent">deschisă</em> investitorilor străini</h2>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-item bento-wide reveal reveal-delay-1">
+                <div class="bento-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Proprietate străină 100%</h3>
+                <p>Investitorii străini pot deține integral companiile din Arabia Saudită, fără obligația unui partener local în majoritatea sectoarelor de activitate.</p>
+            </div>
+
+            <div class="bento-item bento-wide reveal reveal-delay-2">
+                <div class="bento-icon gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>Fiscalitate avantajoasă</h3>
+                <p>Fără impozit pe venit din salarii (în general). Impozit pe profit de 20% — în funcție de structură și statut fiscal.</p>
+            </div>
+
+            <div class="bento-item bento-narrow reveal reveal-delay-3">
+                <div class="bento-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>Vision 2030</h3>
+                <p>Oportunități masive în tehnologie, construcții, sănătate.</p>
+            </div>
+
+            <div class="bento-item bento-narrow reveal reveal-delay-4">
+                <div class="bento-icon gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                </div>
+                <h3>Piața GCC</h3>
+                <p>Acces direct la piețele din Golf: Arabia Saudită, Emirate, Qatar, Bahrain, Kuwait și Oman.</p>
+            </div>
+
+            <div class="bento-item bento-narrow reveal reveal-delay-5">
+                <div class="bento-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Stabilitate</h3>
+                <p>Economie solidă, rating de credit A+ și infrastructură modernă.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- ==================== WHAT CORPENTA DOES ==================== -->
+<section class="sect what-section" id="servicii">
+    <div class="container">
+        <div class="sect-header reveal">
+            <span class="eyebrow">Ce facem pentru tine</span>
+            <h2 class="heading-lg">Gestionăm <em class="em-accent">complet</em> procesul de înființare</h2>
+            <p class="body-md" style="margin-top: 16px; max-width: 480px;">Corpenta este un furnizor direct — nu intermediar. Un singur punct de contact, responsabilitate totală.</p>
+        </div>
+
+        <div class="service-row">
+            <div class="service-entry reveal reveal-delay-1">
+                <div class="service-marker">
+                    <div class="service-dot"></div>
+                    <div class="service-line"></div>
+                </div>
+                <div class="service-block">
+                    <h3>Licență de investiții MISA</h3>
+                    <p>Obținem licența de investiții străine de la Ministerul Investițiilor — documentul esențial pentru operarea legală în Regat.</p>
+                </div>
+            </div>
+
+            <div class="service-entry reveal reveal-delay-2">
+                <div class="service-marker">
+                    <div class="service-dot"></div>
+                    <div class="service-line"></div>
+                </div>
+                <div class="service-block">
+                    <h3>Înregistrare comercială completă</h3>
+                    <p>Redactarea actelor constitutive, notarizare, înregistrarea la Camera de Comerț, GOSI, Qiwa și toate platformele guvernamentale.</p>
+                </div>
+            </div>
+
+            <div class="service-entry reveal reveal-delay-3">
+                <div class="service-marker">
+                    <div class="service-dot"></div>
+                    <div class="service-line"></div>
+                </div>
+                <div class="service-block">
+                    <h3>Suport post-înregistrare</h3>
+                    <p>Viză pentru director general, asistență pentru rezidență (Iqama), înregistrare ZATCA, deschidere cont bancar corporate.</p>
+                </div>
+            </div>
+
+            <div class="service-entry reveal reveal-delay-4">
+                <div class="service-marker">
+                    <div class="service-dot"></div>
+                </div>
+                <div class="service-block">
+                    <h3>Asistență completă în limba română</h3>
+                    <p>Comunicare clară, în limba ta, pe tot parcursul procesului. Echipa Corpenta vorbește 6 limbi, inclusiv română.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-mid reveal">
+            <a href="#formular" class="btn-primary">
+                Solicită o consultație
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="sect how-section" id="cum-functioneaza">
+    <div class="container">
+        <div class="sect-header reveal">
+            <span class="eyebrow">Cum funcționează</span>
+            <h2 class="heading-lg">De la primul contact la <em class="em-accent">companie operațională</em></h2>
+        </div>
+
+        <div class="process-track">
+            <div class="process-card reveal reveal-delay-1">
+                <div class="process-num">01</div>
+                <h3>Consultare și analiză</h3>
+                <p>Analizăm documentele companiei-mamă și stabilim structura juridică optimă pentru Arabia Saudită.</p>
+            </div>
+            <div class="process-card reveal reveal-delay-2">
+                <div class="process-num">02</div>
+                <h3>Licență MISA</h3>
+                <p>Pregătim și depunem dosarul complet. Obținem licența de investiții străine de la Minister.</p>
+            </div>
+            <div class="process-card reveal reveal-delay-3">
+                <div class="process-num">03</div>
+                <h3>Acte constitutive</h3>
+                <p>Redactăm și notarizăm actele de constituire conform legislației saudite în vigoare.</p>
+            </div>
+            <div class="process-card reveal reveal-delay-4">
+                <div class="process-num">04</div>
+                <h3>Înregistrare completă</h3>
+                <p>Registrul comerțului, GOSI, Qiwa, Camera de Comerț — totul gestionat într-un singur pachet.</p>
+            </div>
+            <div class="process-card reveal reveal-delay-5">
+                <div class="process-num">05</div>
+                <h3>Viză și rezidență</h3>
+                <p>Asistență completă pentru viza și rezidența (Iqama) directorului general.</p>
+            </div>
+            <div class="process-card reveal reveal-delay-6">
+                <div class="process-num">06</div>
+                <h3>Cont bancar și operare</h3>
+                <p>Deschidere cont bancar corporate și 30 de zile suport post-lansare gratuit.</p>
+            </div>
+        </div>
+
+        <div class="timeline-bar reveal">
+            <span>Termen estimat: <strong>3 — 8 săptămâni</strong> &nbsp;·&nbsp; în funcție de pachet și complexitate</span>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== WHO IS THIS FOR ==================== -->
+<section class="sect who-section" id="pentru-cine">
+    <div class="container">
+        <div class="sect-header reveal">
+            <span class="eyebrow">Pentru cine</span>
+            <h2 class="heading-lg">Serviciile noastre sunt pentru <em class="em-accent">companii serioase</em></h2>
+        </div>
+
+        <div class="audience-grid">
+            <div class="audience-card reveal reveal-delay-1">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div>
+                    <h3>Companii românești</h3>
+                    <p>Care doresc să se extindă pe piața saudită și să beneficieze de avantajele fiscale ale Regatului.</p>
+                </div>
+            </div>
+            <div class="audience-card reveal reveal-delay-2">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div>
+                    <h3>Investitori cu companie activă</h3>
+                    <p>Care dețin o entitate juridică activă în Europa și doresc o filială sau sucursală în Arabia Saudită.</p>
+                </div>
+            </div>
+            <div class="audience-card reveal reveal-delay-3">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                    <h3>Construcții și inginerie</h3>
+                    <p>Arabia Saudită investește masiv în infrastructură — companiile românești au un avantaj competitiv real.</p>
+                </div>
+            </div>
+            <div class="audience-card reveal reveal-delay-4">
+                <div class="audience-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div>
+                    <h3>Tehnologie și servicii IT</h3>
+                    <p>Sectorul digital crește exponențial, cu investiții de miliarde în AI, cloud și transformare digitală.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- ==================== TRUST ==================== -->
+<section class="sect trust-section" id="incredere">
+    <div class="container">
+        <div class="sect-header reveal">
+            <span class="eyebrow">De ce Corpenta</span>
+            <h2 class="heading-lg">Transparență, competență, <em class="em-accent">implicare directă</em></h2>
+        </div>
+
+        <div class="trust-pillars">
+            <div class="trust-pillar reveal reveal-delay-1">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Furnizor direct</h3>
+                <p>Nu suntem intermediari. Gestionăm procesul direct cu autoritățile saudite.</p>
+            </div>
+            <div class="trust-pillar reveal reveal-delay-2">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3>6 limbi de suport</h3>
+                <p>Inclusiv în limba română — fără bariere lingvistice sau intermediari.</p>
+            </div>
+            <div class="trust-pillar reveal reveal-delay-3">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <h3>Prețuri fixe</h3>
+                <p>De la început, fără costuri ascunse. Știi exact ce plătești.</p>
+            </div>
+            <div class="trust-pillar reveal reveal-delay-4">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h3>Expertiză completă</h3>
+                <p>MISA, ZATCA, Qiwa, GOSI — stăpânim toate platformele guvernamentale.</p>
+            </div>
+        </div>
+
+        <div class="direct-banner reveal">
+            <h3>Nu suntem <em>brokeri</em></h3>
+            <p>Corpenta gestionează direct întregul proces — de la primul document până la operarea completă. O singură echipă responsabilă, fără intermediari terți.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== LEAD FORM ==================== -->
+<section class="sect form-section" id="formular">
+    <div class="orb orb-1"></div>
+    <div class="container">
+        <div class="form-layout">
+            <div class="form-left reveal">
+                <span class="eyebrow">Începe acum</span>
+                <h2 class="heading-lg">Solicită o consultație <em class="em-accent">gratuită</em></h2>
+                <p class="body-lg form-left-desc" style="margin: 20px 0 40px; max-width: 420px;">
+                    Completează formularul și echipa noastră te va contacta în maxim 24 de ore.
+                </p>
+                <ul class="form-checklist">
+                    <li>
+                        <span class="form-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        Consultație inițială fără obligații
+                    </li>
+                    <li>
+                        <span class="form-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        Răspuns în maxim 24 de ore
+                    </li>
+                    <li>
+                        <span class="form-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        Comunicare completă în limba română
+                    </li>
+                    <li>
+                        <span class="form-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        Confidențialitate deplină garantată
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-card reveal reveal-delay-2">
+                <div class="form-card-header">
+                    <h3>Formular de contact</h3>
+                    <p>Câmpurile marcate cu * sunt obligatorii</p>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Nume complet <span class="req">*</span></label>
+                            <input class="form-input" type="text" name="full_name" placeholder="ex: Alexandru Popescu" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">E-mail <span class="req">*</span></label>
+                            <input class="form-input" type="email" name="email" placeholder="alex@compania.ro" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Țara <span class="req">*</span></label>
+                            <select class="form-select" name="country" required>
+                                <option value="" disabled selected>Selectează</option>
+                                <option value="Romania">România</option>
+                                <option value="Moldova">Republica Moldova</option>
+                                <option value="Germany">Germania</option>
+                                <option value="France">Franța</option>
+                                <option value="Italy">Italia</option>
+                                <option value="Spain">Spania</option>
+                                <option value="UK">Regatul Unit</option>
+                                <option value="USA">Statele Unite</option>
+                                <option value="Other">Altă țară</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Domeniul de activitate <span class="req">*</span></label>
+                            <select class="form-select" name="business_type" required>
+                                <option value="" disabled selected>Selectează</option>
+                                <option value="Construcții">Construcții și inginerie</option>
+                                <option value="Tehnologie">Tehnologie și IT</option>
+                                <option value="Consultanță">Consultanță</option>
+                                <option value="Comerț">Comerț</option>
+                                <option value="Sănătate">Sănătate</option>
+                                <option value="Producție">Producție industrială</option>
+                                <option value="Transport">Transport și logistică</option>
+                                <option value="Energie">Energie</option>
+                                <option value="Altele">Alt domeniu</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Telefon <span class="opt">(opțional)</span></label>
+                        <input class="form-input" type="tel" name="phone" placeholder="+40 7XX XXX XXX">
+                        <p class="form-hint">Opțional — pentru contact rapid</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Mesaj scurt <span class="opt">(opțional)</span></label>
+                        <textarea class="form-textarea" name="message" placeholder="Descrie pe scurt planurile tale..." rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Solicită o consultație</button>
+
+                    <p class="form-footer">Datele tale sunt confidențiale și sunt folosite doar pentru a răspunde solicitării tale.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="lp-footer">
+    <div class="container">
+        <div class="footer-row">
+            <p>&copy; 2026 Corpenta — Company Formation Experts</p>
+            <div class="footer-loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Jeddah, Arabia Saudită
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    // ---- Theme Toggle ----
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    // Check saved preference
+    const saved = localStorage.getItem('corpenta-theme');
+    if (saved) html.setAttribute('data-theme', saved);
+
+    toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('corpenta-theme', next);
+    });
+
+    // ---- Scroll Reveal ----
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ---- Smooth Scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // ---- Form ----
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const fields = form.querySelectorAll('[required]');
+        let valid = true;
+
+        fields.forEach(f => {
+            f.style.borderColor = '';
+            if (!f.value.trim()) { f.style.borderColor = 'var(--error)'; valid = false; }
+            if (f.type === 'email' && f.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) {
+                f.style.borderColor = 'var(--error)'; valid = false;
+            }
+        });
+
+        if (valid) {
+            const btn = form.querySelector('.form-submit');
+            const originalText = btn.textContent;
+            btn.textContent = 'Se trimite...';
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+
+            const formData = new FormData(form);
+
+            fetch('send.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log('Server response:', data);
+                if (data.debug) console.log('Debug info:', data.debug);
+                
+                if (data.success) {
+                    // Push to dataLayer for GTM
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'lead_form_submit',
+                        'lead_name': formData.get('full_name'),
+                        'lead_country': formData.get('country'),
+                        'lead_business': formData.get('business_type')
+                    });
+                    // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXX'});
+
+                    form.parentElement.innerHTML = `
+                        <div class="form-success">
+                            <div class="form-success-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="16 10 10.5 15.5 8 13"/></svg>
+                            </div>
+                            <h3>Mulțumim!</h3>
+                            <p>Cererea ta a fost trimisă cu succes.<br>Echipa Corpenta te va contacta în maxim 24 de ore.</p>
+                        </div>
+                    `;
+                } else {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    console.error('Form error:', data.message);
+                    if (data.debug) console.error('Debug:', data.debug);
+                    alert('Eroare: ' + data.message);
+                }
+            })
+            .catch(err => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                alert('A apărut o eroare de rețea. Te rugăm să încerci din nou.');
+                console.error('Network error:', err);
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

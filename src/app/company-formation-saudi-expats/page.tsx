@@ -14,32 +14,34 @@ import { ASSETS } from '@/lib/paths'
 
 const gold = '#a5bdf0'
 
+// ── FAQ — استشارات دخول السوق (بعيد عن اللغة الحوكمية/القانونية) ──
 const faqs = [
-  { q: 'هل يمكن للمقيم الأجنبي امتلاك شركة 100% في السعودية؟', a: 'نعم، يمكن للمستثمر الأجنبي امتلاك شركة في السعودية بنسبة 100% في العديد من الأنشطة.' },
-  { q: 'هل يمكنني امتلاك شركة وأنا أعمل في شركة أخرى داخل السعودية؟', a: 'نعم، يمكن للمقيم الأجنبي امتلاك شركة في السعودية حتى إذا كان يعمل حاليًا لدى شركة أخرى داخل المملكة.' },
-  { q: 'هل يجب نقل كفالتي إلى شركتي الجديدة؟', a: 'لا، ليس بالضرورة. يمكن للمستثمر الاستمرار في عمله الحالي دون نقل الكفالة، مع إمكانية تعيين مدير على الشركة حسب الهيكل المناسب.' },
-  { q: 'هل أحتاج شريك سعودي؟', a: 'ليس في جميع الأنشطة، ويعتمد ذلك على نوع النشاط المطلوب.' },
-  { q: 'كم تستغرق إجراءات تأسيس الشركة؟', a: 'غالبًا بين 3 إلى 8 أسابيع حسب النشاط واكتمال المستندات والإجراءات الحكومية.' },
-  { q: 'هل يمكن بدء الإجراءات وأنا داخل السعودية؟', a: 'نعم، ويمكن تنفيذ جزء كبير من الإجراءات بشكل منظم داخل المملكة.' },
-  { q: 'هل تساعدون في فتح الحساب البنكي؟', a: 'نعم، نقدم دعمًا ومتابعة في إجراءات فتح الحساب البنكي للشركة.' },
-  { q: 'هل يمكن إصدار إقامة (Iqama) بعد تأسيس الشركة؟', a: 'نعم، يمكن المساعدة في إجراءات إقامة المدير العام ضمن الباقات المناسبة.' },
+  { q: 'ما هي خدمات Corpenta بالضبط؟', a: 'نقدم استشارات متخصصة لمساعدة الشركات والمستثمرين الأجانب على فهم بيئة الأعمال في السعودية والتخطيط لدخول السوق بشكل احترافي ومنظم.' },
+  { q: 'هل تناسبون الشركات الكبيرة والصغيرة على حد سواء؟', a: 'نعم، نقدم حلولًا مرنة تناسب رواد الأعمال والشركات الناشئة والمؤسسات الكبيرة الراغبة في التوسع إلى السوق السعودي.' },
+  { q: 'كم تستغرق مرحلة الدخول للسوق السعودي؟', a: 'يعتمد ذلك على طبيعة النشاط والاستعداد المسبق. في الغالب تتراوح المراحل الأولى بين 3 إلى 8 أسابيع وفقًا لطبيعة النشاط التجاري.' },
+  { q: 'هل يمكن البدء من خارج السعودية؟', a: 'نعم، يمكن الاستفادة من خدمات الاستشارة والتخطيط عن بُعد، ثم التنسيق للمراحل التي تستلزم الحضور المحلي.' },
+  { q: 'ما القطاعات التي تدعمونها؟', a: 'ندعم قطاعات متنوعة تشمل التقنية والاستشارات والتجارة والخدمات المهنية والتسويق والمقاولات وغيرها من الأنشطة.' },
+  { q: 'هل تقدمون دعمًا بعد دخول السوق؟', a: 'نعم، في باقاتنا المتقدمة نوفر متابعة تشغيلية لمساعدتك على استقرار نشاطك التجاري خلال الأشهر الأولى من الإطلاق.' },
+  { q: 'هل تساعدون في التواصل مع الجهات المعنية؟', a: 'نعم، نقدم دعمًا تنسيقيًا للتواصل مع الجهات ذات الصلة بحسب طبيعة النشاط واحتياجات كل عميل.' },
+  { q: 'كيف أبدأ العمل مع Corpenta؟', a: 'ابدأ بحجز استشارة أولية مجانية عبر الواتساب أو نموذج التواصل، وسيتواصل معك فريقنا لفهم احتياجاتك وتحديد الخطوات المناسبة.' },
 ]
 
+// ── Comparison rows — مقارنة خدمات استشارية ──
 const comparisonRows = [
-  { label: 'رخصة الاستثمار (MISA)', f: true, o: true, v: true },
-  { label: 'السجل التجاري', f: true, o: true, v: true },
-  { label: 'عقد التأسيس', f: true, o: true, v: true },
-  { label: 'تسجيل الغرفة التجارية', f: true, o: true, v: true },
-  { label: 'تسجيل GOSI', f: true, o: true, v: true },
-  { label: 'Qiwa', f: false, o: true, v: true },
-  { label: 'ZATCA', f: false, o: true, v: true },
-  { label: 'تأشيرة المدير العام', f: false, o: true, v: true },
-  { label: 'دعم الحساب البنكي', f: false, o: false, v: 'موسع' },
+  { label: 'استشارة دخول السوق', f: true, o: true, v: true },
+  { label: 'تقييم الفرص التجارية', f: true, o: true, v: true },
+  { label: 'خطة عمل مخصصة', f: 'أساسية', o: true, v: 'موسعة' },
+  { label: 'تنسيق مراحل التأسيس', f: true, o: true, v: true },
+  { label: 'متابعة الإجراءات الرسمية', f: 'أساسية', o: true, v: true },
+  { label: 'دعم تفعيل المنصات التشغيلية', f: false, o: true, v: true },
+  { label: 'تنسيق الحسابات التجارية', f: false, o: true, v: true },
+  { label: 'دعم استقطاب الكفاءات', f: false, o: true, v: true },
   { label: 'مدير ملف مخصص', f: true, o: true, v: true },
-  { label: 'دعم تشغيلي', f: 'أساسي', o: true, v: 'موسع' },
-  { label: 'أولوية المتابعة الحكومية', f: false, o: false, v: true },
-  { label: 'المساعدة في الإقامة', f: false, o: false, v: true },
-  { label: '6 أشهر دعم ما بعد التأسيس', f: false, o: false, v: true },
+  { label: 'تقارير دورية لمتابعة التقدم', f: false, o: true, v: true },
+  { label: 'أولوية المتابعة', f: false, o: false, v: true },
+  { label: 'دعم التشغيل الموسع', f: false, o: false, v: true },
+  { label: 'دعم ما بعد الإطلاق', f: false, o: false, v: '6 أشهر' },
+  { label: 'استشارة شراكات استراتيجية', f: false, o: false, v: true },
 ]
 
 function CellValue({ val }: { val: boolean | string }) {
@@ -60,9 +62,13 @@ export default function Design3Page() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('/api/send-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) })
+      const res = await fetch('https://formspree.io/f/xpqnjrdv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formData),
+      })
       const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'حدث خطأ في إرسال الرسالة')
+      if (!res.ok) throw new Error(data.errors?.[0]?.message || 'حدث خطأ في إرسال الرسالة')
       setSubmitted(true)
       setFormData({ name: '', email: '', phone: '', activity: '', message: '' })
       setTimeout(() => setSubmitted(false), 5000)
@@ -79,17 +85,9 @@ export default function Design3Page() {
       {/* ── Header ── */}
       <header className="fixed top-0 inset-x-0 z-50 border-b backdrop-blur-sm" style={{ backgroundColor: 'rgba(255,255,255,0.9)', borderColor: 'rgba(0,0,0,0.08)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between" style={{ height: 72 }}>
-          <a
-  href="https://corpenta.com/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <img
-    src={ASSETS.logo}
-    alt="Corpenta"
-    className="h-9 w-auto cursor-pointer"
-  />
-</a>
+          <a href="https://corpenta.com/" target="_blank" rel="noopener noreferrer">
+            <img src={ASSETS.logo} alt="Corpenta" className="h-9 w-auto cursor-pointer" />
+          </a>
           <nav className="hidden md:flex items-center gap-10">
             {[
               ['الخدمات', '#services'],
@@ -98,11 +96,11 @@ export default function Design3Page() {
               ['الأسئلة', '#faq'],
               ['تواصل', '#contact']
             ].map(([label, href]) => (
-              <a 
-                key={label} 
+              <a
+                key={label}
                 href={href}
                 {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="text-sm transition-colors" 
+                className="text-sm transition-colors"
                 style={{ color: '#6b7280', fontWeight: 600 }}
               >
                 {label}
@@ -138,14 +136,14 @@ export default function Design3Page() {
               className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-8"
               style={{ backgroundColor: 'rgba(212,175,55,0.15)', color: gold, border: `1px solid rgba(212,175,55,0.3)` }}
             >
-              للمقيمين الأجانب داخل المملكة
+              للشركات والمستثمرين الأجانب
             </span>
             <h1 className="text-white leading-snug mb-6" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', fontWeight: 600 }}>
-              حوّل خبرتك في السعودية إلى{' '}
-              <span className="italic" style={{ color: gold }}>شركة قانونية</span>
+              استشارات دخول السوق السعودي{' '}
+              <span className="italic" style={{ color: gold }}>بطريقة احترافية</span>
             </h1>
             <p className="text-base leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
-              نساعد المقيمين الأجانب على تأسيس شركاتهم بشكل قانوني ومنظم — من رخصة الاستثمار وحتى تشغيل الشركة فعليًا.
+              نساعد الشركات والمستثمرين الأجانب على فهم بيئة الأعمال في السعودية والتخطيط لدخول السوق بخطوات واضحة ومنظمة.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="#contact" className="px-7 py-3.5 rounded-xl text-sm font-bold transition-all hover:opacity-90" style={{ backgroundColor: gold, color: navy }}>
@@ -159,7 +157,7 @@ export default function Design3Page() {
 
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-4 mt-12 pt-8 border-t" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
-            {[['3–8', 'أسابيع للتأسيس'], ['100%', 'ملكية أجنبية'], ['MISA', 'معتمد من']].map(([val, lbl]) => (
+            {[['3–8', 'أسابيع للتأسيس'], ['100%', 'دعم مخصص'], ['+5', 'قطاعات ندعمها']].map(([val, lbl]) => (
               <div key={lbl}>
                 <div className="text-2xl font-bold" style={{ color: gold }}>{val}</div>
                 <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>{lbl}</div>
@@ -183,8 +181,8 @@ export default function Design3Page() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="rounded-2xl p-6" style={{ backgroundColor: 'rgba(10,10,110,0.04)', border: `1px solid rgba(10,10,110,0.1)` }}>
-              <p className="text-sm font-bold mb-4" style={{ color: navy }}>ما يمتلكه المقيم</p>
-              {['خبرة عملية قوية', 'علاقات مهنية محلية', 'فهم حقيقي للسوق', 'خبرة في التشغيل'].map(t => (
+              <p className="text-sm font-bold mb-4" style={{ color: navy }}>ما يمتلكه المستثمر الأجنبي</p>
+              {['خبرة دولية قوية', 'علاقات مهنية واسعة', 'رأس مال وموارد', 'رغبة حقيقية في التوسع'].map(t => (
                 <div key={t} className="flex items-center gap-2.5 mb-2.5 text-sm" style={{ color: '#4b5563' }}>
                   <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: navy }} />
                   {t}
@@ -193,7 +191,7 @@ export default function Design3Page() {
             </div>
             <div className="rounded-2xl p-6" style={{ backgroundColor: 'rgba(55, 212, 181, 0.05)', border: `1px solid rgba(212,175,55,0.2)` }}>
               <p className="text-sm font-bold mb-4" style={{ color: '#92740e' }}>التحديات التي يواجهها</p>
-              {['الإجراءات الحكومية', 'التراخيص والتوثيق', 'فتح الحسابات البنكية', 'تشغيل المنصات', 'بناء كيان قانوني رسمي'].map(t => (
+              {['فهم بيئة الأعمال المحلية', 'التخطيط لمراحل الدخول', 'التنسيق مع الجهات المعنية', 'إعداد الهيكل التشغيلي', 'البدء بثقة وسرعة'].map(t => (
                 <div key={t} className="flex items-center gap-2.5 mb-2.5 text-sm" style={{ color: '#4b5563' }}>
                   <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: gold }} />
                   {t}
@@ -204,8 +202,8 @@ export default function Design3Page() {
 
           <p className="mt-8 text-base" style={{ color: '#6b7280' }}>
             نحن لا نقدم مجرد{' '}
-            <strong style={{ color: '#0a0a1a', fontWeight: 700 }}>"استخراج سجل تجاري"</strong>
-            {' '}— بل نساعدك على تأسيس نشاط قانوني احترافي بخطوات واضحة.
+            <strong style={{ color: '#0a0a1a', fontWeight: 700 }}>"معلومات عامة"</strong>
+            {' '}— بل نرافقك خطوة بخطوة من التخطيط وحتى التشغيل الفعلي.
           </p>
         </motion.div>
       </section>
@@ -225,12 +223,12 @@ export default function Design3Page() {
         {/* Feature strips */}
         <div className="space-y-3">
           {[
-            { icon: Building2, title: 'ملكية أجنبية 100%', desc: 'ملكية كاملة بدون شريك محلي في معظم القطاعات' },
-            { icon: Zap, title: 'رؤية 2030', desc: 'تطوير مستمر في الأنظمة والتحول الرقمي وبيئة الاستثمار' },
-            { icon: Target, title: 'ميزة المقيم', desc: 'فهم السوق المحلي وشبكة علاقات وخبرة عملية داخل المملكة' },
-            { icon: Globe, title: 'أكبر اقتصاد في المنطقة', desc: 'فرص في التجارة والتقنية والمقاولات والخدمات والاستشارات' },
-            { icon: Shield, title: 'توقيت مناسب', desc: 'إصلاحات استثمارية تمنح فرصة لتقليل تكاليف الدخول إلى السوق' },
-            { icon: Briefcase, title: 'قطاعات متنوعة', desc: 'التسويق والتشغيل والخدمات اللوجستية والاستشارات والتقنية' },
+            { icon: Building2, title: 'سوق ضخم ومتنامٍ', desc: 'السعودية من أكبر الأسواق الإقليمية مع طلب متزايد على الخدمات المتخصصة' },
+            { icon: Zap, title: 'رؤية 2030', desc: 'تطوير مستمر في بيئة الأعمال والتحول الرقمي وفرص الاستثمار' },
+            { icon: Target, title: 'توقيت مثالي للدخول', desc: 'مرحلة الانفتاح الاقتصادي توفر فرصًا غير مسبوقة للشركات الأجنبية' },
+            { icon: Globe, title: 'بوابة للمنطقة', desc: 'الحضور في السعودية يفتح الباب أمام الأسواق الخليجية والإقليمية' },
+            { icon: Shield, title: 'بيئة أعمال احترافية', desc: 'إصلاحات مستمرة تعزز سهولة ممارسة الأعمال وثقة المستثمر الأجنبي' },
+            { icon: Briefcase, title: 'قطاعات متنوعة', desc: 'التسويق والتشغيل والخدمات اللوجستية والاستشارات والتقنية والتجارة' },
           ].map((item, i) => (
             <motion.div
               key={item.title}
@@ -258,7 +256,7 @@ export default function Design3Page() {
       {/* ── NAVY STRIP ── */}
       <div className="py-12 px-6" style={{ backgroundColor: navy }}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-2xl font-bold text-white">هل أنت مستعد لبناء شركتك؟</p>
+          <p className="text-2xl font-bold text-white">هل أنت مستعد لدخول السوق السعودي؟</p>
           <div className="flex gap-4">
             <a href="#contact" className="px-6 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-all" style={{ backgroundColor: gold, color: navy }}>احجز استشارة مجانية</a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl text-sm font-bold transition-all" style={{ border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.85)' }}>واتساب</a>
@@ -273,7 +271,7 @@ export default function Design3Page() {
           <div className="pt-2 lg:pt-4">
             <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: gold }}>خدماتنا</p>
             <h2 className="text-3xl lg:text-5xl" style={{ color: '#0a0a1a', fontWeight: 700 }}>
-              دعم <span className="italic" style={{ color: navy }}>متكامل</span> من الرخصة حتى التشغيل
+              دعم <span className="italic" style={{ color: navy }}>متكامل</span> من التخطيط حتى التشغيل
             </h2>
           </div>
         </div>
@@ -287,20 +285,19 @@ export default function Design3Page() {
             style={{ backgroundColor: navy, minHeight: 140 }}
           >
             <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: 'rgba(212,175,55,0.15)' }}>
-              <Shield className="w-7 h-7" style={{ color: gold }} />
+              <Target className="w-7 h-7" style={{ color: gold }} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-1">رخصة الاستثمار (MISA)</h3>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>إصدار رخصة الاستثمار الأجنبي حسب النشاط المناسب لنشاطك التجاري</p>
+              <h3 className="text-xl font-bold text-white mb-1">استشارات دخول السوق</h3>
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>تقييم شامل لفرص دخول السوق السعودي وتحديد المسار الأمثل لنشاطك التجاري</p>
             </div>
           </motion.div>
 
           {[
-            { icon: FileText, title: 'تأسيس الشركة', desc: 'السجل التجاري وعقد التأسيس' },
-            { icon: Building2, title: 'الغرفة التجارية', desc: 'التسجيل الرسمي' },
-            { icon: Handshake, title: 'توثيق العقود', desc: 'التوثيق لدى الجهات المختصة' },
-            { icon: Building2, title: 'تسجيل ZATCA', desc: 'هيئة الزكاة والضريبة' },
-            { icon: Users, title: 'تسجيل GOSI', desc: 'التأمينات الاجتماعية' },
+            { icon: FileText, title: 'خطة عمل مخصصة', desc: 'تصميم خطة دخول واضحة حسب طبيعة نشاطك' },
+            { icon: Building2, title: 'تنسيق مراحل التأسيس', desc: 'متابعة وتنظيم خطوات البداية الفعلية' },
+            { icon: Handshake, title: 'دعم الشراكات', desc: 'ربط بشركاء محليين وجهات داعمة' },
+            { icon: Users, title: 'دعم استقطاب الكفاءات', desc: 'إرشاد لبناء الفريق التشغيلي المناسب' },
           ].map((s, i) => (
             <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.03 * (i + 1) }}
               className="rounded-2xl p-6 border" style={{ borderColor: 'rgba(0,0,0,0.08)', backgroundColor: '#fafafa' }}>
@@ -314,8 +311,8 @@ export default function Design3Page() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="rounded-2xl p-6" style={{ backgroundColor: gold }}>
             <Globe className="w-7 h-7 mb-3" style={{ color: navy }} />
-            <h3 className="font-bold mb-1 text-sm" style={{ color: navy }}>تفعيل Qiwa</h3>
-            <p className="text-xs" style={{ color: 'rgba(10,10,110,0.65)' }}>منصة قوى للموارد البشرية</p>
+            <h3 className="font-bold mb-1 text-sm" style={{ color: navy }}>دعم المنصات التشغيلية</h3>
+            <p className="text-xs" style={{ color: 'rgba(10,10,110,0.65)' }}>إرشاد لتفعيل البنية التشغيلية الرقمية</p>
           </motion.div>
 
           {/* Wide bottom card */}
@@ -323,17 +320,17 @@ export default function Design3Page() {
             className="col-span-2 rounded-2xl p-8 border" style={{ borderColor: 'rgba(0,0,0,0.08)', backgroundColor: '#fafafa' }}>
             <div className="flex items-center gap-4 mb-3">
               <Rocket className="w-8 h-8" style={{ color: navy }} />
-              <h3 className="text-lg font-bold" style={{ color: '#0a0a1a' }}>دعم ما بعد التأسيس</h3>
+              <h3 className="text-lg font-bold" style={{ color: '#0a0a1a' }}>دعم ما بعد الإطلاق</h3>
               <span className="text-xs px-2.5 py-1 rounded-full font-bold" style={{ backgroundColor: 'rgba(212,175,55,0.15)', color: '#92740e' }}>VIP فقط</span>
             </div>
-            <p className="text-sm" style={{ color: '#6b7280' }}>متابعة تشغيلية وإجرائية لمساعدتك على بدء النشاط بشكل منظم — لمدة 6 أشهر كاملة بعد التأسيس</p>
+            <p className="text-sm" style={{ color: '#6b7280' }}>متابعة تشغيلية مستمرة لمساعدتك على استقرار نشاطك التجاري — لمدة 6 أشهر كاملة بعد الإطلاق</p>
           </motion.div>
 
           {[
-            { icon: Briefcase, title: 'فتح الحساب البنكي', desc: 'دعم ومتابعة الإجراءات' },
-            { icon: Star, title: 'تأشيرة المدير العام', desc: 'استخراج التأشيرة' },
-            { icon: Target, title: 'المساعدة في الإقامة', desc: 'إقامة المدير (Iqama)' },
-            { icon: Zap, title: 'ختم الشركة الرسمي', desc: 'استخراج الختم الرسمي' },
+            { icon: Briefcase, title: 'دعم الحسابات التجارية', desc: 'إرشاد لمتطلبات الحسابات البنكية للأعمال' },
+            { icon: Star, title: 'تقارير دورية', desc: 'متابعة شاملة لمراحل التقدم' },
+            { icon: Shield, title: 'تنسيق مع الجهات المعنية', desc: 'تسهيل التواصل مع الأطراف ذات الصلة' },
+            { icon: Zap, title: 'جاهزية تشغيلية كاملة', desc: 'ضمان استعداد كامل قبل بدء النشاط' },
           ].map((s, i) => (
             <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.03 * (i + 5) }}
               className="rounded-2xl p-6 border" style={{ borderColor: 'rgba(0,0,0,0.08)', backgroundColor: '#fafafa' }}>
@@ -365,11 +362,11 @@ export default function Design3Page() {
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               {[
-                { icon: FileText, num: '01', title: 'مراجعة النشاط', desc: 'نحدد النشاط المناسب والمتطلبات القانونية' },
-                { icon: FileText, num: '02', title: 'تجهيز المستندات', desc: 'فحص وإعداد كافة الوثائق المطلوبة' },
-                { icon: Shield, num: '03', title: 'إصدار الرخصة', desc: 'التقديم لـ MISA ومتابعة الترخيص' },
-                { icon: Building2, num: '04', title: 'تأسيس الشركة', desc: 'السجل التجاري وتوثيق العقود' },
-                { icon: Rocket, num: '05', title: 'تشغيل الشركة', desc: 'تفعيل المنصات الحكومية والبدء' },
+                { icon: FileText, num: '01', title: 'مراجعة النشاط', desc: 'فهم طبيعة النشاط وتحديد المسار المناسب' },
+                { icon: Target, num: '02', title: 'تقييم المتطلبات', desc: 'مراجعة احتياجات التوسع والتشغيل' },
+                { icon: Shield, num: '03', title: 'خطة دخول مخصصة', desc: 'تنظيم خطوات دخول السوق بطريقة واضحة' },
+                { icon: Building2, num: '04', title: 'تنسيق مراحل البداية', desc: 'متابعة خطوات التأسيس والتجهيز' },
+                { icon: Rocket, num: '05', title: 'دعم الإطلاق والتشغيل', desc: 'مساندة الأعمال خلال مرحلة التشغيل الأولى' },
               ].map((step, i) => (
                 <motion.div
                   key={step.num}
@@ -407,9 +404,24 @@ export default function Design3Page() {
         {/* Vertical pricing cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {[
-            { name: 'Foundation', nameEn: 'FOUNDATION', price: '26,500', duration: '3–6 أسابيع', desc: 'للدخول القانوني وبناء الحضور الرسمي في السعودية', features: ['رخصة الاستثمار (MISA)', 'السجل التجاري (CR)', 'عقد التأسيس', 'تسجيل الغرفة التجارية', 'تسجيل GOSI', 'مدير ملف مخصص', 'إعداد أولي للمنصات'], accent: false },
-            { name: 'Operational', nameEn: 'OPERATIONAL', price: '37,500', duration: '4–8 أسابيع', desc: 'تأسيس متكامل مع جاهزية تشغيلية للشركة', features: ['كل ما في Foundation', 'تفعيل Qiwa وZATCA', 'تأشيرة المدير العام', 'ختم الشركة الرسمي', 'دعم أساسي للحساب البنكي'], accent: true },
-            { name: 'VIP', nameEn: 'VIP', price: '53,900', duration: '4–10 أسابيع', desc: 'حل متكامل مع دعم موسع بعد التأسيس', features: ['كل ما في Operational', 'المساعدة في الإقامة', 'دعم موسع للحساب البنكي', 'أولوية المتابعة الحكومية', '6 أشهر دعم ما بعد التأسيس'], accent: false },
+            {
+              name: 'Foundation', nameEn: 'FOUNDATION', price: '26,500', duration: '3–6 أسابيع',
+              desc: 'للشركات التي تبدأ استكشاف السوق السعودي وتريد أساسًا متينًا',
+              features: ['استشارة دخول السوق', 'خطة عمل أساسية مخصصة', 'تنسيق مراحل التأسيس', 'إرشاد لمتطلبات التشغيل', 'تواصل مع الجهات المعنية', 'مدير ملف مخصص', 'إعداد أولي للبنية التشغيلية'],
+              accent: false
+            },
+            {
+              name: 'Operational', nameEn: 'OPERATIONAL', price: '37,500', duration: '4–8 أسابيع',
+              desc: 'دعم متكامل لدخول السوق مع جاهزية تشغيلية كاملة',
+              features: ['كل ما في Foundation', 'دعم تفعيل المنصات التشغيلية', 'تنسيق الحسابات التجارية', 'دعم استقطاب الكفاءات', 'تقارير دورية لمتابعة التقدم'],
+              accent: true
+            },
+            {
+              name: 'VIP', nameEn: 'VIP', price: '53,900', duration: '4–10 أسابيع',
+              desc: 'حل شامل مع دعم موسع ومتابعة ما بعد الإطلاق',
+              features: ['كل ما في Operational', 'أولوية المتابعة والتنسيق', 'دعم التشغيل الموسع', 'استشارة شراكات استراتيجية', '6 أشهر دعم ما بعد الإطلاق'],
+              accent: false
+            },
           ].map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -425,7 +437,7 @@ export default function Design3Page() {
                   الأكثر طلبًا
                 </div>
               )}
-              
+
               <div className="mb-6">
                 <span className="text-xs font-bold tracking-widest block mb-2" style={{ color: '#9ca3af' }}>{plan.nameEn}</span>
                 <h3 className="text-2xl font-bold mb-2" style={{ color: '#0a0a1a' }}>{plan.name}</h3>
@@ -470,20 +482,20 @@ export default function Design3Page() {
                   <th className="text-xs text-white p-4 text-center">Foundation</th>
                   <th className="text-xs text-white p-4 text-center">Operational</th>
                   <th className="text-xs text-white p-4 text-center">VIP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr key={row.label} style={{ backgroundColor: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)' }}>
+                    <td className="text-xs p-3 text-right" style={{ color: '#374151' }}>{row.label}</td>
+                    <td className="p-3"><CellValue val={row.f} /></td>
+                    <td className="p-3"><CellValue val={row.o} /></td>
+                    <td className="p-3"><CellValue val={row.v} /></td>
                   </tr>
-                </thead>
-                <tbody>
-                  {comparisonRows.map((row, i) => (
-                    <tr key={row.label} style={{ backgroundColor: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)' }}>
-                      <td className="text-xs p-3 text-right" style={{ color: '#374151' }}>{row.label}</td>
-                      <td className="p-3"><CellValue val={row.f} /></td>
-                      <td className="p-3"><CellValue val={row.o} /></td>
-                      <td className="p-3"><CellValue val={row.v} /></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -537,7 +549,7 @@ export default function Design3Page() {
             <div className="pt-2 lg:pt-4">
               <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: gold }}>تواصل معنا</p>
               <h2 className="text-3xl lg:text-5xl" style={{ color: '#0a0a1a', fontWeight: 700 }}>
-                جاهز لبدء <span className="italic" style={{ color: navy }}>شركتك؟</span>
+                جاهز لدخول <span className="italic" style={{ color: navy }}>السوق السعودي؟</span>
               </h2>
             </div>
           </div>
@@ -567,7 +579,7 @@ export default function Design3Page() {
                 </a>
               </div>
               <div className="flex flex-wrap gap-6">
-                {[{ icon: Shield, text: 'معتمد من MISA' }, { icon: CheckCircle2, text: 'أسعار شفافة' }, { icon: Globe, text: 'عربي / إنجليزي' }].map(b => (
+                {[{ icon: Shield, text: 'استشارة احترافية موثوقة' }, { icon: CheckCircle2, text: 'أسعار شفافة' }, { icon: Globe, text: 'عربي / English' }].map(b => (
                   <div key={b.text} className="flex items-center gap-2 text-sm" style={{ color: '#6b7280' }}>
                     <b.icon className="w-4 h-4" style={{ color: navy }} />
                     {b.text}
@@ -611,7 +623,7 @@ export default function Design3Page() {
                   </div>
                   <div>
                     <label className="block text-sm font-bold mb-2" style={{ color: '#0a0a1a' }}>رسالتك</label>
-                    <textarea disabled={loading} value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} rows={4} className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none resize-none disabled:opacity-50" style={{ borderColor: 'rgba(0,0,0,0.12)', color: '#0a0a1a', backgroundColor: 'white' }} placeholder="أخبرنا عن وضعك الحالي وما تريد تأسيسه..." />
+                    <textarea disabled={loading} value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} rows={4} className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none resize-none disabled:opacity-50" style={{ borderColor: 'rgba(0,0,0,0.12)', color: '#0a0a1a', backgroundColor: 'white' }} placeholder="أخبرنا عن نشاطك أو خطتك للتوسع في السوق السعودي..." />
                   </div>
                   <button type="submit" disabled={loading} className="w-full py-4 rounded-xl text-white font-bold transition-all hover:opacity-90 disabled:opacity-50" style={{ backgroundColor: navy }}>
                     {loading ? 'جاري الإرسال...' : 'أرسل استفسارك'}

@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "build:cpanel": "next build && echo Build complete! Upload contents of 'out' folder to cPanel",
-    "start": "next start",
+    "start": "node server.js",
+    "build:cpanel": "next build && echo Build complete! Now run: build-for-cpanel.bat",
     "lint": "eslint .",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",

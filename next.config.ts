@@ -2,8 +2,9 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
 
+
 const nextConfig: NextConfig = {
-  output: "export",
+  output: "export", // Static export for cPanel File Manager
   images: {
     unoptimized: true,
   },
@@ -24,3 +25,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
